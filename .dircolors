@@ -1,0 +1,2379 @@
+# Configuration file for dircolors, a utility to help you set the
+# LS_COLORS environment variable used by GNU ls with the --color option.
+# Copyright (C) 1996, 1999-2009
+# Free Software Foundation, Inc.
+# Copying and distribution of this file, with or without modification,
+# are permitted provided the copyright notice and this notice are preserved.
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+# slackware version of dircolors) are recognized but ignored.
+# You can copy this file to .dir_colors in your $HOME directory to override
+# the system defaults.
+# Below, there should be one TERM entry for each termtype that is colorizable
+TERM Eterm
+TERM ansi
+TERM color-xterm
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM eterm-color
+TERM gnome
+TERM gnome-256color
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mlterm
+TERM putty
+TERM rxvt
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM screen
+TERM screen-256color
+TERM screen-256color-bce
+TERM screen-bce
+TERM screen-w
+TERM screen.linux
+TERM vt100
+TERM xterm
+TERM xterm-16color
+TERM xterm-256color
+TERM xterm-88color
+TERM xterm-color
+TERM xterm-debian
+# Below are the color init strings for the basic file types. A color init
+# string consists of one or more of the following numeric codes:
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+#NORMAL 00 # no color code at all
+#FILE 00 # regular file: use no color at all
+RESET 0 # reset to "normal" color
+DIR 01;34 # directory
+LINK 01;36 # symbolic link. (If you set this to 'target' instead of a
+ # numerical value, the color is as for the file pointed to.)
+#MULTIHARDLINK 00 # regular file with more than one link
+FIFO 40;33 # pipe
+SOCK 01;35 # socket
+DOOR 01;35 # door
+BLK 40;33;01 # block device driver
+CHR 40;33;01 # character device driver
+ORPHAN 01;05;37;41 # orphaned syminks
+MISSING 01;05;37;41 # ... and the files they point to
+SETUID 37;41 # file that is setuid (u+s)
+SETGID 30;43 # file that is setgid (g+s)
+CAPABILITY 30;41 # file with capability
+STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
+STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
+# This is for files with execute permission:
+# EXEC 01;32
+# List any file extensions like '.gz' or '.tar' that you would like ls
+# to colorize below. Put the extension, a space, and the color init string.
+# (and any comments you want to add after a '#')
+# If you use DOS-style suffixes, you may want to uncomment the following:
+#.cmd 01;32 # executables (bright green)
+#.exe 01;32
+#.com 01;32
+#.btm 01;32
+#.bat 01;32
+# Or if you want to colorize scripts even if they do not have the
+# executable bit actually set.
+#.sh 01;32
+#.csh 01;32
+
+#EXTRA
+.desktop 04;37
+
+# COMPRESSED
+.0 01;31 # Hacha Split Archive File QAverage
+.7z 01;31 # 7-Zip Compressed File AbsolutelyVeryCommon
+.ace 01;31 # WinAce Compressed File QAverage
+.ain 01;31 # AIN Compressed File Archive QAverage
+.alz 01;31 # ALZip Archive Common
+.apz 01;31 # Autoplay Media Studio Exported Project QAverage
+.ar 01;31 # Unix Static Library QAverage
+.arc 01;31 # Compressed File Archive QAverage
+.ari 01;31 # ARI Compressed File Archive QAverage
+.axx 01;31 # AxCrypt Encrypted File QAverage
+.b64 01;31 # Base64 MIME-Encoded File QAverage
+.ba 01;31 # Scifer External Header Archive QAverage
+.bh 01;31 # BlakHole Archive QAverage
+.boo 01;31 # Booasm Compressed Archive QAverage
+.bz 01;31 # Bzip Compressed File QAverage
+.bz2 01;31 # Bzip2 Compressed File QAverage
+.bzip 01;31 # Bzip Compressed Archive QAverage
+.c00 01;31 # WinAce Split Archive File QAverage
+.c01 01;31 # WinAce Split Archive Part 1 File QAverage
+.c02 01;31 # WinAce Split Archive Part 1 File QAverage
+.car 01;31 # CAR Archive QAverage
+.cbz 01;31 # Comic Book ZIP Archive QAverage
+.cp9 01;31 # ChoicePoint Encrypted File QAverage
+.cpgz 01;31 # Compressed CPIO Archive QAverage
+.dar 01;31 # DAR Disk Archive QAverage
+.dd 01;31 # DiskDouber Archive QAverage
+.deb 01;31 # Debian Software Package AbsolutelyVeryCommon
+.dgc 01;31 # DGCA File Archive QAverage
+.dist 01;31 # Mac OS X Distribution Script QAverage
+.ecs 01;31 # Sony Ericsson Phone Backup File QAverage
+.efw 01;31 # Renamed Zip or Executable File QAverage
+.fdp 01;31 # MySafe Encrypted Data QAverage
+.gca 01;31 # GCA File Archive QAverage
+.gz 01;31 # Gnu Zipped File AbsolutelyVeryCommon
+.gzi 01;31 # Unix Gzip File QAverage
+.gzip 01;31 # Gnu Zipped File QAverage
+.hbc 01;31 # HyperBac Compressed Archive QAverage
+.hbc2 01;31 # HyperBac Compressed File Archive QAverage
+.hbe 01;31 # HyperBac Compressed and Encrypted Archive QAverage
+.hki 01;31 # WinHKI Archive QAverage
+.hki1 01;31 # WinHKI HKI1 Archive QAverage
+.hki2 01;31 # WinHKI HKI2 Archive QAverage
+.hki3 01;31 # WinHKI HKI3 Archive QAverage
+.hyp 01;31 # HYPER Compressed Archive QAverage
+.ice 01;31 # ICE File Archive QAverage
+.ipg 01;31 # iPod Game File QAverage
+.ipk 01;31 # Itsy Package QAverage
+.ish 01;31 # ISH Compressed Archive QAverage
+.j 01;31 # JAR Archive QAverage
+.jgz 01;31 # Gzipped Javascript File QAverage
+.jic 01;31 # Java Icon File QAverage
+.kgb 01;31 # KGB Archive File QAverage
+.lbr 01;31 # LU Library Archive QAverage
+.lha 01;31 # LHARC Compressed Archive QAverage
+.lnx 01;31 # Commodore 64 Lynx Archive QAverage
+.lqr 01;31 # SQ Compressed LBR Archive QAverage
+.lz 01;31 # Lzip Compressed File QAverage
+.lzm 01;31 # Slax Module QAverage
+.lzo 01;31 # LZO Compressed File QAverage
+.lzx 01;31 # Amiga LZX Compressed File QAverage
+.mint 01;31 # Linux Mint Installer File QAverage
+.mpkg 01;31 # Meta Package File QAverage
+.mzp 01;31 # MAXScript Zip Package QAverage
+.p7m 01;31 # Digitally Encrypted Message QAverage
+.package 01;31 # Linux Autopackage File QAverage
+.pae 01;31 # PowerArchiver Encrypted Archive QAverage
+.pak 01;31 # PAK (Packed) File QAverage
+.paq6 01;31 # PAQ6 Data Archive QAverage
+.paq7 01;31 # PAQ7 Data Archive QAverage
+.par 01;31 # Parchive Index File QAverage
+.par2 01;31 # Parchive 2 Index File QAverage
+.pbi 01;31 # PC BSD Installer Package QAverage
+.pcv 01;31 # Mozilla Profile Backup QAverage
+.pea 01;31 # PEA File Archive QAverage
+.pf 01;31 # Private File QAverage
+.pim 01;31 # PIM Archive QAverage
+.piz 01;31 # Zipped File QAverage
+.pkg 01;31 # Mac OS X Installer Package AbsolutelyVeryCommon
+.pup 01;31 # Puppy Linux DotPup Installer Package Common
+.pwa 01;31 # Password Agent File QAverage
+.qda 01;31 # Quadruple D Archive QAverage
+.r00 01;31 # WinRAR Compressed Archive QAverage
+.r01 01;31 # WinRAR Split Archive Part 1 QAverage
+.rar 01;31 # WinRAR Compressed Archive AbsolutelyVeryCommon
+.rnc 01;31 # RNC ProPack Archive QAverage
+.rp9 01;31 # RetroPlatform Disk Image Archive QAverage
+.rpm 01;31 # Red Hat Package Manager File Common
+.rte 01;31 # RTE Encoded File QAverage
+.rz 01;31 # Rzip Compressed File QAverage
+.rzs 01;31 # Red Zion Security File QAverage
+.s00 01;31 # ZipSplitter Part 1 Archive QAverage
+.s01 01;31 # ZipSplitter Part 2 Archive QAverage
+.s02 01;31 # ZipSplitter Part 3 Archive QAverage
+.s7z 01;31 # Mac OS X 7-Zip File QAverage
+.sar 01;31 # Service Archive File QAverage
+.sea 01;31 # Self-Extracting Archive Common
+.sen 01;31 # Scifer Internal Header Archive QAverage
+.sfs 01;31 # SquashFS File Archive QAverage
+.sfx 01;31 # Windows Self-Extracting Archive Common
+.sh 01;31 # Unix Shell Archive QAverage
+.shar 01;31 # Unix Shar Archive QAverage
+.shk 01;31 # ShrinkIt Archive QAverage
+.shr 01;31 # Unix Shell Archive File QAverage
+.sit 01;31 # Stuffit Archive AbsolutelyVeryCommon
+.sitx 01;31 # Stuffit X Archive AbsolutelyVeryCommon
+.spt 01;31 # TM File Packer Compressed Archive QAverage
+.sqx 01;31 # SQX Archive QAverage
+.sqz 01;31 # Squeezed Video File QAverage
+.tar 01;31 # Consolidated Unix File Archive QAverage
+.taz 01;31 # Tar Zipped File QAverage
+.tbz 01;31 # Bzip Compressed Tar Archive QAverage
+.tgz 01;31 # Gzipped Tar File Common
+.tz 01;31 # Zipped Tar Archive QAverage
+.uc2 01;31 # UltraCompressor 2 Archive QAverage
+.uha 01;31 # UHarc Compressed Archive QAverage
+.vem 01;31 # Virtual Expander Compressed File QAverage
+.vsi 01;31 # Visual Studio Content Installer File QAverage
+.wad 01;31 # Compressed Game Data QAverage
+.war 01;31 # Java Web Archive Common
+.wot 01;31 # Web Of Trust File QAverage
+.xef 01;31 # WinAce Encrypted File QAverage
+.xez 01;31 # eManager Template Package QAverage
+.xmcdz 01;31 # Mathcad Compressed Worksheet File QAverage
+.xpi 01;31 # Mozilla Installer Package QAverage
+.y 01;31 # Amiga Yabba Compressed File QAverage
+.yz 01;31 # YAC Compressed File QAverage
+.z 01;31 # Unix Compressed File QAverage
+.z01 01;31 # WinZip First Split Zip File QAverage
+.zap 01;31 # FileWrangler Archive QAverage
+.zfsendtotarget 01;31 # Compressed Folder QAverage
+.zip 01;31 # Zipped File AbsolutelyVeryCommon
+.zipx 01;31 # Extended Zip File AbsolutelyVeryCommon
+.zix 01;31 # WinZix Compressed File QAverage
+.zoo 01;31 # Zoo Compressed File QAverage
+.zz 01;31 # Zzip Compressed Archive QAverage
+
+# DATA
+.ttf 00;32 # font file
+.out 00;32 # my output file
+.doc 00;32 # Microsoft Word Document AbsolutelyVeryCommon
+.docm 00;32 # Word 2007 Macro-Enabled Document QAverage
+.docx 00;32 # Microsoft Word Open XML Document AbsolutelyVeryCommon
+.dot 00;32 # Microsoft Word Template QAverage
+.dotm 00;32 # Word 2007 Macro-Enabled Document Template QAverage
+.dotx 00;32 # Word 2007 Document Template QAverage
+.pdf 00;32 # Portable Document Format File AbsolutelyVeryCommon
+.$er 00;32 # GroupWise Database QAverage
+.123 00;32 # Lotus 1-2-3 Spreadsheet AbsolutelyVeryCommon
+.1pe 00;32 # TurboTax Form File QAverage
+.1ph 00;32 # TurboTax File QAverage
+.3dt 00;32 # 3D Topicscape File QAverage
+.4dv 00;32 # 4D View Ultrasound File QAverage
+.a3l 00;32 # Authorware 3 Library QAverage
+.a3m 00;32 # Authorware 3 Macintosh File QAverage
+.a3w 00;32 # Authorware 3 Windows File QAverage
+.a4l 00;32 # Authorware 4 Library QAverage
+.a4m 00;32 # Authorware 4 Macintosh File QAverage
+.a4w 00;32 # Authorware 4 Windows File QAverage
+.a5l 00;32 # Authorware 5 Library QAverage
+.a5w 00;32 # Authorware 5 Windows File QAverage
+.a65 00;32 # Authorware 6.5 File QAverage
+.ab 00;32 # DNA Sequence File QAverage
+.ab1 00;32 # DNA Electropherogram File QAverage
+.ab3 00;32 # PhotoImpact 3 Album File QAverage
+.abcd 00;32 # AudioVisual Book Data File QAverage
+.abi 00;32 # DNA Chromatogram File QAverage
+.abp 00;32 # AVS Barcode Profile QAverage
+.acc 00;32 # Graphics Accounts Data File QAverage
+.accdb 00;32 # Access 2007 Database File AbsolutelyVeryCommon
+.ade 00;32 # Access Project Extension QAverage
+.adp 00;32 # Access Project QAverage
+.adt 00;32 # ACT! Document Template QAverage
+.adx 00;32 # Approach Index File QAverage
+.aft 00;32 # Ancestry.com Family Tree Database QAverage
+.aifb 00;32 # AIF Builder Project File QAverage
+.alc 00;32 # Dynamics AX Label Description File QAverage
+.ald 00;32 # Dynamics AX Application Label Data File QAverage
+.ali 00;32 # Dynamics AX Label Index File QAverage
+.amb 00;32 # AIMMS Model File QAverage
+.amsorm 00;32 # OnLine Ringman Auction Client File QAverage
+.anme 00;32 # Anime Studio Project Common
+.apr 00;32 # ArcView Project File QAverage
+.ask 00;32 # askSam Database QAverage
+.asm 00;32 # Solid Edge Assembly Document QAverage
+.awg 00;32 # Activeworlds Object Group File QAverage
+.azw 00;32 # Amazon Kindle eBook File QAverage
+.bci 00;32 # Belarc Advisor Report File QAverage
+.bcm 00;32 # Business Contact Manager File QAverage
+.bdic 00;32 # Chrome Dictionary File QAverage
+.bgl 00;32 # Babylon Glossary File QAverage
+.bgt 00;32 # Graphics Accounts Data File QAverage
+.bin 00;32 # Generic Binary File QAverage
+.bk 00;32 # FrameMaker Book File QAverage
+.bkk 00;32 # BookBuddi eBook File QAverage
+.blb 00;32 # Blob Data File QAverage
+.bok 00;32 # TestGen Testbank File QAverage
+.box 00;32 # E-mail Mailbox QAverage
+.brd 00;32 # EAGLE Circuit Board File QAverage
+.btm 00;32 # BizTalk Map File QAverage
+.cap 00;32 # Packet Capture File QAverage
+.cat 00;32 # Advanced Disk Catalog Database QAverage
+.cbg 00;32 # CyberGauge Data File QAverage
+.cch 00;32 # Corel Chart File QAverage
+.ccr 00;32 # ASTM Continuity of Care Record QAverage
+.cdf 00;32 # Content Definition File Common
+.cdx 00;32 # Compound Index File QAverage
+.cel 00;32 # Battery 3 Drum Cell File QAverage
+.celtx 00;32 # Celtx Project File QAverage
+.chg 00;32 # Quicken Online Data File QAverage
+.chn 00;32 # Ethnograph Data QAverage
+.ckt 00;32 # CircuitMaker File QAverage
+.clp 00;32 # Windows Clipboard File QAverage
+.cna 00;32 # Catena Project File QAverage
+.contact 00;32 # Windows Contact File Common
+.crd 00;32 # Windows Cardfile QAverage
+.crtx 00;32 # Office 2007 Chart Template File QAverage
+.csa 00;32 # PNA Code Calset File QAverage
+.csv 00;32 # Comma Separated Values File AbsolutelyVeryCommon
+.ctf 00;32 # WhereIsIt Catalog QAverage
+.ctt 00;32 # Messenger Contact List QAverage
+.cursorfx 00;32 # CursorFX Theme File QAverage
+.curxptheme 00;32 # CursorXP Theme File QAverage
+.cvd 00;32 # ClamAV Virus Definitions File QAverage
+.cvn 00;32 # CineVision Encoding Session QAverage
+.cwk 00;32 # ClarisWorks Document QAverage
+.cws 00;32 # Claris Works Template QAverage
+.cyo 00;32 # Clustify Output File QAverage
+.cys 00;32 # Clustify Summary File QAverage
+.dal 00;32 # DVD-lab Project File QAverage
+.dam 00;32 # DeltaMaster Analysis Model QAverage
+.das 00;32 # DeltaMaster Analysis Session QAverage
+.dat 00;32 # Data File AbsolutelyVeryCommon
+.db 00;32 # Database File AbsolutelyVeryCommon
+.db2 00;32 # dBASE II Database QAverage
+.dbc 00;32 # FoxPro Database QAverage
+.dbd 00;32 # DemoShield Project QAverage
+.dbf 00;32 # Database File QAverage
+.dbx 00;32 # Visual FoxPro Table QAverage
+.dcf 00;32 # Document Computation Format Common
+.dcl 00;32 # DumpSec Report File QAverage
+.dcmd 00;32 # DiskCatalogMaker Thumbnail-Enabled Catalog QAverage
+.ddc 00;32 # DivX Descriptor File QAverage
+.ddcx 00;32 # DivX Descriptor 2 File QAverage
+.dem 00;32 # Digital Elevation Model QAverage
+.des 00;32 # QuickBooks Forms Template QAverage
+.dex 00;32 # DEXIS Digital X-ray File QAverage
+.dfm 00;32 # Midas ViewPoint Display Form QAverage
+.dfproj 00;32 # DVD Flick Project QAverage
+.dft 00;32 # Solid Edge Draft Document QAverage
+.dgb 00;32 # FlashCAD Drawing Database QAverage
+.dif 00;32 # Data Interchange Format Common
+.dii 00;32 # Summation Batch Load File QAverage
+.dlg 00;32 # Digital Line Graph QAverage
+.dll 00;32 # Dynamic Link Library AbsolutelyVeryCommon
+.dm2 00;32 # Toad Data Modeler 2 File QAverage
+.dmo 00;32 # Derive Demo QAverage
+.dockzip 00;32 # ObjectDock File QAverage
+.dp1 00;32 # DataPower Database File QAverage
+.dpn 00;32 # Depiction Data File QAverage
+.drl 00;32 # Gerber Drill Rack File QAverage
+.dsb 00;32 # Orchida Embroidery File QAverage
+.dsk 00;32 # Simple IDs Database QAverage
+.dsy 00;32 # Directory Synchronizer Project File QAverage
+.dsz 00;32 # Orchida (OES) Embroidery File QAverage
+.dtr 00;32 # DATroniC Data Recording QAverage
+.dvdproj 00;32 # iDVD Project File QAverage
+.dwi 00;32 # Dance With Intensity Song File QAverage
+.eap 00;32 # Enterprise Architect Project QAverage
+.ebuild 00;32 # Portage eBuild Script QAverage
+.eco 00;32 # ECCO Database File QAverage
+.ecx 00;32 # ECCO Corrupted Database File QAverage
+.edb 00;32 # Exchange Information Store Database QAverage
+.edf 00;32 # Estimator Data File QAverage
+.efx 00;32 # eFax Document AbsolutelyVeryCommon
+.emb 00;32 # Embroidery Design File QAverage
+.emd 00;32 # ChessBase Tablebase QAverage
+.emlxpart 00;32 # Mail Message Attachment QAverage
+.epp 00;32 # TalaPhoto Project QAverage
+.epub 00;32 # Open eBook File QAverage
+.epw 00;32 # EnergyPlus Weather Data File Common
+.er1 00;32 # ERWin Entity Relationship Diagram QAverage
+.esp 00;32 # ACD/Labs Dataset QAverage
+.ess 00;32 # EasySpreadsheet Spreadsheet QAverage
+.est 00;32 # Streets & Trips Map File QAverage
+.ev 00;32 # Echoview File QAverage
+.evy 00;32 # Envoy File QAverage
+.exp 00;32 # Export File Common
+.exx 00;32 # IBM Linkway MsgPut File QAverage
+.fa 00;32 # FASTA Formatted Sequence File QAverage
+.fasta 00;32 # FASTA Sequence File QAverage
+.fcd 00;32 # First Choice Database QAverage
+.fcs 00;32 # First Choice Spreadsheet QAverage
+.fdb 00;32 # Portfolio Catalog Common
+.ffd 00;32 # Flat File Description QAverage
+.ffwp 00;32 # FormsForWeb Packet QAverage
+.fhc 00;32 # FHC Data File QAverage
+.fil 00;32 # Files List Object File QAverage
+.flame 00;32 # Fractal Flame File QAverage
+.fll 00;32 # FoxPro Dynamic-Link Library QAverage
+.flo 00;32 # iGrafx FlowCharter File QAverage
+.flp 00;32 # Activprimary Flipchart File QAverage
+.flt 00;32 # Flight Simulator Saved Flight QAverage
+.fm 00;32 # FileMaker Spreadsheet QAverage
+.fm5 00;32 # FileMaker 5 Database QAverage
+.fmp 00;32 # FileMaker Pro Database QAverage
+.fo 00;32 # XSL-FO Form QAverage
+.fob 00;32 # Dynamics NAV Object Container File QAverage
+.fop 00;32 # InfoZoom Protected Data File QAverage
+.fox 00;32 # InfoZoom Data File QAverage
+.fp 00;32 # FileMaker Pro Spreadsheet QAverage
+.fp3 00;32 # FileMaker Pro 3 Database QAverage
+.fp4 00;32 # FileMaker Pro 4 Database QAverage
+.fp5 00;32 # FileMaker Pro 5 Database QAverage
+.fp7 00;32 # FileMaker Pro 7+ Database QAverage
+.frl 00;32 # Electronic Form Loader QAverage
+.frm 00;32 # ADL Form QAverage
+.fro 00;32 # dBASE IV Compiled Report QAverage
+.frx 00;32 # FoxPro Report QAverage
+.fsb 00;32 # FMOD Sample Bank File QAverage
+.fsc 00;32 # Practical Scriptwriter File QAverage
+.ftm 00;32 # Family Tree Maker for DOS File QAverage
+.ftw 00;32 # Family Tree Maker File QAverage
+.gan 00;32 # GanttProject Project File QAverage
+.gbr 00;32 # Gerber File QAverage
+.gc 00;32 # GraphClick File QAverage
+.gcx 00;32 # Grapher Graph File QAverage
+.ged 00;32 # GEDCOM Genealogy Data File QAverage
+.gedcom 00;32 # GEDCOM Genealogy File QAverage
+.ggb 00;32 # GeoGebra Document QAverage
+.gml 00;32 # Geography Markup Language File QAverage
+.gms 00;32 # Gesture and Motion Signal File QAverage
+.gp3 00;32 # Guitar Pro 3 File QAverage
+.gpx 00;32 # GPS Exchange File Common
+.gra 00;32 # Microsoft Graph File QAverage
+.grade 00;32 # GradeStat Document QAverage
+.grf 00;32 # Generic Graph File QAverage
+.grib 00;32 # Gridded Binary File QAverage
+.grk 00;32 # Gradekeeper Class Gradebook File QAverage
+.grr 00;32 # Gradekeeper Class Roster File QAverage
+.gs 00;32 # GemStone Document QAverage
+.gst 00;32 # MapInfo Geoset File QAverage
+.gtp 00;32 # Guitar Pro File QAverage
+.gwk 00;32 # GraphiCode PCB Job File QAverage
+.gxl 00;32 # Graph Exchange Language File QAverage
+.hcc 00;32 # HydroCAD Prefab Chamber Data File QAverage
+.hce 00;32 # HydroCAD Hydrograph Data File QAverage
+.hci 00;32 # HydroCAD IDF Data File QAverage
+.hcp 00;32 # HydroCAD Project File Common
+.hcr 00;32 # HydroCAD Rainfall Curve Data File QAverage
+.hcu 00;32 # Hydrograph Units Definitons File QAverage
+.hda 00;32 # HotDocs Auto-Assemble File QAverage
+.hdf 00;32 # Hierarchical Data Format File Common
+.hdi 00;32 # HotDocs Auto-Install File QAverage
+.hdl 00;32 # HotDocs Library QAverage
+.hif 00;32 # Quicken Online File QAverage
+.hl 00;32 # HeuristicLab Storage File QAverage
+.hml 00;32 # HostMonitor TestList File QAverage
+.hs2 00;32 # HyperRESEARCH 2 Study File QAverage
+.hst 00;32 # History File QAverage
+.huh 00;32 # HydroCAD Unit Hydrograph Definitions File QAverage
+.i5z 00;32 # IUCLID 5 Import/Export File QAverage
+.ib 00;32 # InterBase Database QAverage
+.ics 00;32 # iCalendar File QAverage
+.idx 00;32 # HMI Historical Log Index File QAverage
+.igc 00;32 # Anime List Builder Input File QAverage
+.ihx 00;32 # IN-HEH Timeline Database QAverage
+.iif 00;32 # Intuit Interchange Format File QAverage
+.inp 00;32 # ABAQUS Input File QAverage
+.ins 00;32 # Inspiration File Common
+.ip 00;32 # IconPackager Theme File QAverage
+.irock 00;32 # intelliRock Sensor Data File QAverage
+.isf 00;32 # Inspiration Flowchart Document QAverage
+.itdb 00;32 # iTunes Database File QAverage
+.itl 00;32 # iTunes Library File QAverage
+.itm 00;32 # iThink Model File QAverage
+.itn 00;32 # TomTom Navigator Itinerary File QAverage
+.itw 00;32 # InTouch With Database File QAverage
+.itx 00;32 # ITX Form Template QAverage
+.ivt 00;32 # Beyond 20/20 Table QAverage
+.jasper 00;32 # JasperReports Data File QAverage
+.jef 00;32 # Janome Embroidery Format QAverage
+.jmp 00;32 # JMP Data File QAverage
+.jnt 00;32 # Windows Journal File Common
+.joboptions 00;32 # Adobe Joboptions File QAverage
+.joined 00;32 # HJ-Split Data File QAverage
+.jph 00;32 # JProbe Memory Snapshot QAverage
+.jrprint 00;32 # JasperReports Print File Common
+.jrxml 00;32 # JasperReports Layout File QAverage
+.jude 00;32 # JUDE Project File QAverage
+.kap 00;32 # BSB Chart Image File QAverage
+.kdb 00;32 # Keypass Database File QAverage
+.kid 00;32 # Kidspiration Document QAverage
+.kismac 00;32 # KisMAC Webservice File QAverage
+.kmz 00;32 # Google Earth Placemark File Common
+.kpf 00;32 # Komodo Project File QAverage
+.kpp 00;32 # Kid Pix Presentation QAverage
+.kpr 00;32 # KPresenter Presentation QAverage
+.kpx 00;32 # Kid Pix Picture QAverage
+.kpz 00;32 # Komodo Template File QAverage
+.l 00;32 # Game of Life File QAverage
+.l6t 00;32 # Line 6 Tone File QAverage
+.laccdb 00;32 # Microsoft Access Lock File QAverage
+.lcd 00;32 # ABBYY Language File QAverage
+.lcf 00;32 # ArchiCAD Library Container File QAverage
+.lcm 00;32 # Lipikar Custom Map File QAverage
+.ldif 00;32 # LDAP Data Interchange Format File QAverage
+.lgc 00;32 # SimpleK Database File QAverage
+.lgh 00;32 # HMI Historical Log File QAverage
+.lgi 00;32 # Multimedia Logic File QAverage
+.lib 00;32 # Generic Data Library Common
+.lif 00;32 # TurboTax Information Archive QAverage
+.liveupdate 00;32 # Symantec LiveUpdate File Common
+.lix 00;32 # Logos Library System File QAverage
+.llb 00;32 # LabVIEW Library File QAverage
+.lms 00;32 # LenMus Score File QAverage
+.loc 00;32 # GPS Location File QAverage
+.lp7 00;32 # LP7 Digitally Signed File QAverage
+.lrf 00;32 # Sony Portable Reader File QAverage
+.lrs 00;32 # Librie Reader Source File QAverage
+.lrx 00;32 # Sony Portable Reader File QAverage
+.lsf 00;32 # Logos Library System File QAverage
+.lsl 00;32 # LightScribe Label QAverage
+.lsp 00;32 # LANsurveyor Poll List QAverage
+.lsr 00;32 # LANsurveyor Report QAverage
+.lsu 00;32 # LANsurveyor Map QAverage
+.lw4 00;32 # Lightwright File QAverage
+.ly 00;32 # LilyPond File QAverage
+.mag 00;32 # Magic Circuit Layout QAverage
+.mai 00;32 # Microsoft Mail File QAverage
+.map 00;32 # Weather Defender Map QAverage
+.mat 00;32 # MATLAB Variables Binary File QAverage
+.mbg 00;32 # Mailbag Assistant Mailbox File QAverage
+.mbl 00;32 # Logger Pro Data File QAverage
+.mbp 00;32 # Mobipocket Notes File QAverage
+.mbx 00;32 # Outlook Express Mailbox QAverage
+.mc1 00;32 # MedCalc Data File QAverage
+.mc9 00;32 # Mastercam 9 Geometry File QAverage
+.mcd 00;32 # Mathcad Document QAverage
+.mdb 00;32 # Microsoft Access Database AbsolutelyVeryCommon
+.mdc 00;32 # Multi Dimension Cube File QAverage
+.mdf 00;32 # Measurement Data Format File QAverage
+.mdl 00;32 # Simulink Model File QAverage
+.mdn 00;32 # Blank Access Database Template QAverage
+.mdt 00;32 # Access Database Template QAverage
+.mdx 00;32 # Multiple Index File QAverage
+.mdz 00;32 # Access Wizard Template QAverage
+.mex 00;32 # Macro Express File QAverage
+.mfo 00;32 # Perl ModInfo Descriptor File QAverage
+.mfp 00;32 # Macromedia FlashPaper Document QAverage
+.mgc 00;32 # MGCSoft Equation Illustrator File QAverage
+.mls 00;32 # Milestones Simplicity File QAverage
+.mm 00;32 # FreeMind Mind Map QAverage
+.mmap 00;32 # MindManager Map File QAverage
+.mmc 00;32 # Microsoft Media Catalog QAverage
+.mmp 00;32 # MindManager Mind Map QAverage
+.mnc 00;32 # My Notes Center Notebook QAverage
+.mnk 00;32 # My Notes Keeper Notebook QAverage
+.mno 00;32 # Macromedia Design Note QAverage
+.mny 00;32 # Microsoft Money File QAverage
+.mobi 00;32 # Mobipocket eBook QAverage
+.moho 00;32 # Anime Studio Animation Project QAverage
+.mosaic 00;32 # MacOSaiX Mosaic File QAverage
+.mox 00;32 # ExtendSim Simulation Software Model QAverage
+.mpp 00;32 # Microsoft Project File Common
+.mpt 00;32 # Microsoft Project Template QAverage
+.mpx 00;32 # Microsoft Project Exchange File QAverage
+.mpz 00;32 # Miradi Project File QAverage
+.mq4 00;32 # MetaTrader Custom Indicator QAverage
+.mth 00;32 # Derive Math File QAverage
+.mud 00;32 # Textease Multi User Database QAverage
+.mw 00;32 # Maple Worksheet Common
+.mws 00;32 # Maple Classic Worksheet QAverage
+.mxd 00;32 # ArcGIS Map Document QAverage
+.myd 00;32 # MySQL Database Data File QAverage
+.myi 00;32 # MySQL MyISAM Index File QAverage
+.nb 00;32 # Mathematica Notebook QAverage
+.ndf 00;32 # SQL Server Secondary Database File QAverage
+.ndk 00;32 # Lotus Notes Design Elements File QAverage
+.ndx 00;32 # dBASE Index File Common
+.net 00;32 # netViz Project File QAverage
+.neta 00;32 # Netica Binary File QAverage
+.nitf 00;32 # National Imagery Transmission Format File QAverage
+.nmind 00;32 # NovaMind Mind Map File QAverage
+.not 00;32 # Notation File Common
+.notebook 00;32 # SMART Notebook File QAverage
+.np 00;32 # Portfolio NetPublish File QAverage
+.npl 00;32 # Nokia Playlist File QAverage
+.npt 00;32 # Portfolio NetPublish Template QAverage
+.nrl 00;32 # Autonomy Interwoven Link File QAverage
+.ns2 00;32 # Lotus Notes 2 Database QAverage
+.ns3 00;32 # Lotus Notes 3 Database QAverage
+.ns4 00;32 # Lotus Notes 4 Database QAverage
+.nsf 00;32 # Lotus Notes Database QAverage
+.numbers 00;32 # Numbers Spreadsheet File Common
+.nvl 00;32 # UniChem Results File QAverage
+.nyf 00;32 # myBase Database File QAverage
+.oab 00;32 # Offline Address Book QAverage
+.odb 00;32 # ABAQUS Database QAverage
+.odf 00;32 # Open Document File QAverage
+.odp 00;32 # OpenDocument Presentation QAverage
+.ods 00;32 # OpenDocument Spreadsheet Common
+.odx 00;32 # BizTalk Server Orchestration File QAverage
+.oeaccount 00;32 # Windows Mail Account File Common
+.ofc 00;32 # Open Financial Connectivity File QAverage
+.ofm 00;32 # OmniForm Form QAverage
+.oft 00;32 # Outlook File Template QAverage
+.ofx 00;32 # Open Financial Exchange File QAverage
+.omp 00;32 # Office Manager Document Archive QAverage
+.ond 00;32 # Lotus Notes Encapsulated Memo File QAverage
+.one 00;32 # OneNote Document QAverage
+.oo3 00;32 # OmniOutliner 3 File QAverage
+.opf 00;32 # FlipViewer FlipBook File QAverage
+.opx 00;32 # OrgPlus Org Chart QAverage
+.or6 00;32 # Lotus Organizer 6 File QAverage
+.org 00;32 # Lotus Organizer File QAverage
+.otf 00;32 # OpenTuft Tufting Design File QAverage
+.otl 00;32 # NoteTab Outline File QAverage
+.otln 00;32 # Opal Outline File QAverage
+.ots 00;32 # OpenDocument Spreadsheet Template QAverage
+.ov2 00;32 # TomTom Points of Interest Database Common
+.ova 00;32 # Octava Musical Score QAverage
+.ovf 00;32 # Open Virtualization File Common
+.p96 00;32 # Win96 Database File QAverage
+.p97 00;32 # Win97 Database File QAverage
+.pab 00;32 # Personal Address Book QAverage
+.pan 00;32 # Panorama Database File QAverage
+.pc 00;32 # Personal Composer File QAverage
+.pcap 00;32 # Packet Capture Data QAverage
+.pcb 00;32 # Printed Circuit Board Design File QAverage
+.pdas 00;32 # PDAStore Data Store File QAverage
+.pdb 00;32 # Program Database QAverage
+.pdd 00;32 # Medtronic Programmer Data File QAverage
+.pdm 00;32 # PowerDesigner Database File QAverage
+.pds 00;32 # Planetary Data System File QAverage
+.pdx 00;32 # Adobe Acrobat Index File Common
+.pep 00;32 # TurboProject Project File QAverage
+.pex 00;32 # Merak Peep Data File QAverage
+.pfc 00;32 # AOL Personal File Cabinet Common
+.pfl 00;32 # Family Lawyer Document QAverage
+.phm 00;32 # Pro Home Manager Data File QAverage
+.pi 00;32 # Pi Calculation Data File QAverage
+.pjx 00;32 # FoxPro Project QAverage
+.pka 00;32 # Packet Tracer Activity File QAverage
+.pkb 00;32 # Oracle Package Body File QAverage
+.pkh 00;32 # Oracle Package File QAverage
+.pks 00;32 # Oracle Package Spec File QAverage
+.pkt 00;32 # Packet Tracer Network Simulation Model QAverage
+.plw 00;32 # PicoLog Data File QAverage
+.pmd 00;32 # PageMaker Document QAverage
+.pmr 00;32 # Performance Monitor Report QAverage
+.pnproj 00;32 # Programmer's Notepad Project File QAverage
+.pod 00;32 # OpenProj Project File QAverage
+.pot 00;32 # PowerPoint Template QAverage
+.potx 00;32 # PowerPoint Open XML Presentation Template QAverage
+.pp2 00;32 # PingPlotter Data File QAverage
+.ppf 00;32 # Publisher Project File QAverage
+.pps 00;32 # PowerPoint Slide Show AbsolutelyVeryCommon
+.ppsx 00;32 # PowerPoint Open XML Slide Show Common
+.ppt 00;32 # PowerPoint Presentation AbsolutelyVeryCommon
+.pptm 00;32 # PowerPoint 2007 Macro-Enabled Presentation QAverage
+.pptx 00;32 # Microsoft PowerPoint Open XML Document AbsolutelyVeryCommon
+.prc 00;32 # Mobipocket eBook File QAverage
+.prj 00;32 # Project File QAverage
+.prm 00;32 # Route 66 Map File QAverage
+.prs 00;32 # Harvard Graphics Presentation QAverage
+.psa 00;32 # Photoshop Album Catalog Common
+.psm 00;32 # Prism Document QAverage
+.pst 00;32 # Personal Information Store File QAverage
+.ptb 00;32 # Power Tab File QAverage
+.ptk 00;32 # Quicken Online Financial Data File QAverage
+.ptm 00;32 # MapPoint Map File QAverage
+.ptn 00;32 # PaperPort Thumbnail File QAverage
+.ptt 00;32 # MapPoint Map Template QAverage
+.pub 00;32 # Publisher Document QAverage
+.pvl 00;32 # Instalit Library QAverage
+.pwd 00;32 # Solid Edge Weldment Document QAverage
+.pxj 00;32 # RecordNow Project QAverage
+.qbw 00;32 # QuickBooks Data File QAverage
+.qdf 00;32 # Quicken Data File Common
+.qdfm 00;32 # Quicken Data File (Macintosh) QAverage
+.qel 00;32 # Quicken Electronic Library QAverage
+.qfx 00;32 # Quicken Financial Exchange File Common
+.qif 00;32 # Quicken Interchange Format File QAverage
+.qpb 00;32 # Quicken Payroll File QAverage
+.qpf 00;32 # Quartus II Project File QAverage
+.qph 00;32 # Quicken Price History File QAverage
+.qpm 00;32 # Quick Pallet Maker Input Data QAverage
+.qpw 00;32 # Quattro Pro Spreadsheet QAverage
+.qrp 00;32 # QuSoft QuickReports File QAverage
+.ral 00;32 # WinRail Track Design File QAverage
+.rbt 00;32 # Lego MINDSTORMS NXT Program QAverage
+.rcg 00;32 # Recog Character Recognition Set QAverage
+.rdb 00;32 # N64 ROM Database QAverage
+.rdf 00;32 # Report Definition QAverage
+.ret 00;32 # BusinessObjects Template QAverage
+.rf1 00;32 # Retirement Forecast File QAverage
+.rfa 00;32 # Revit Family File QAverage
+.rge 00;32 # Entourage File Archive QAverage
+.rgn 00;32 # Garmin Regional Map File QAverage
+.rgo 00;32 # RepliGo File QAverage
+.rnq 00;32 # Renque Model File QAverage
+.rod 00;32 # Actuate Report Object Design File QAverage
+.rog 00;32 # Roger 2 Input Data File QAverage
+.roi 00;32 # Report Object Instance Common
+.rou 00;32 # Gerber Route File QAverage
+.rpt 00;32 # Crystal Reports File QAverage
+.rrt 00;32 # Rhapzode Resource Template QAverage
+.rsd 00;32 # RealSQLDatabase File QAverage
+.rsw 00;32 # R&R SQL Report Writer Report File QAverage
+.rvt 00;32 # Revit Project File Common
+.rzb 00;32 # Red Zion Book File QAverage
+.s85 00;32 # Sabre Airline Solutions Chart QAverage
+.saf 00;32 # Street Atlas USA Map File Common
+.sav 00;32 # SPSS Data File QAverage
+.sbf 00;32 # SmartBroker Data QAverage
+.sca 00;32 # Norton AntiVirus Scan File QAverage
+.scf 00;32 # DNA Sequence Chromatogram File QAverage
+.sch 00;32 # EAGLE Schematics File QAverage
+.sdb 00;32 # OpenOffice.org Base Database File AbsolutelyVeryCommon
+.sdc 00;32 # OpenOffice.org Calc Spreadsheet Common
+.sdf 00;32 # Standard Data File AbsolutelyVeryCommon
+.sdp 00;32 # Session Description Protocol File QAverage
+.sdq 00;32 # SAS Data File QAverage
+.sds 00;32 # OpenOffice.org Chart QAverage
+.seo 00;32 # SEO Note File QAverage
+.seq 00;32 # DNA Sequence Text File QAverage
+.sgml 00;32 # Standard Generalized Markup Language File QAverage
+.shx 00;32 # Shapefile Index File QAverage
+.skv 00;32 # Semicolon Separated Values File QAverage
+.skx 00;32 # XLANG Schedule File QAverage
+.sle 00;32 # Sisulizer Package File QAverage
+.slp 00;32 # Sisulizer Project File QAverage
+.snapfireshow 00;32 # Corel SnapfireShow File QAverage
+.sps 00;32 # SPSS Program File QAverage
+.spub 00;32 # Disc Cover File QAverage
+.spv 00;32 # SPSS Output File QAverage
+.sq 00;32 # Sysquake Program QAverage
+.sqd 00;32 # SQ Data File QAverage
+.sql 00;32 # Structured Query Language Data AbsolutelyVeryCommon
+.sqlite 00;32 # SQLite Database File QAverage
+.sqr 00;32 # SQL Program File QAverage
+.sta 00;32 # ABAQUS Status File QAverage
+.stc 00;32 # StarOffice Calc Spreadsheet Template QAverage
+.stk 00;32 # Stickfigure Animator File QAverage
+.stm 00;32 # Exchange Streaming Media File Common
+.str 00;32 # dBASE Structure List Object File QAverage
+.stt 00;32 # Streets & Trips Map Template QAverage
+.stw 00;32 # STATISTICA Workbook QAverage
+.styk 00;32 # Stykz Stick Figure QAverage
+.stykz 00;32 # Stykz Animation QAverage
+.swk 00;32 # StudyWorks Save File QAverage
+.sxc 00;32 # StarOffice Calc Spreadsheet QAverage
+.sxi 00;32 # StarOffice Impress Presentation QAverage
+.t01 00;32 # TaxCut 2001 File QAverage
+.t02 00;32 # TaxCut 2002 File QAverage
+.t03 00;32 # TaxCut 2003 File QAverage
+.t04 00;32 # TaxCut 2004 File QAverage
+.t05 00;32 # TaxCut 2005 Tax Return QAverage
+.t06 00;32 # TaxCut 2006 Tax Return QAverage
+.t07 00;32 # TaxCut 2007 Tax Return QAverage
+.t3001 00;32 # TARGET 3001! Circuit Design Project File QAverage
+.tax2008 00;32 # TurboTax 2008 Tax Return QAverage
+.tb 00;32 # Tabbery Tab File QAverage
+.tbk 00;32 # ToolBook File QAverage
+.tcx 00;32 # Training Center Database File QAverage
+.tda 00;32 # Palm To-Do File QAverage
+.tdl 00;32 # Tab Delineated Format File QAverage
+.te 00;32 # Textease CT Database File Common
+.te3 00;32 # WinTrack Object File QAverage
+.tef 00;32 # TablEdit Tablature QAverage
+.tet 00;32 # Textease CT Template QAverage
+.tfa 00;32 # TreeSoft CashFlow Analysis Data File QAverage
+.tfd 00;32 # Tape Format Requirements Document QAverage
+.tfrd 00;32 # Tape Image Format Requirements Document QAverage
+.tjp 00;32 # TaskJuggler Project File QAverage
+.tk3 00;32 # TK3 Multimedia eBook QAverage
+.tkfl 00;32 # TKLinks Saver Favorite Links File QAverage
+.topc 00;32 # TopicCrunch Project File QAverage
+.tpb 00;32 # GROMACS Binary Input File QAverage
+.tps 00;32 # Multi Channel Measurement File QAverage
+.tr3 00;32 # TomeRaider eBook File QAverage
+.tra 00;32 # WinTrack Railroad Track File QAverage
+.trd 00;32 # TrID Definitions Package QAverage
+.trs 00;32 # Rosetta Stone Language Data Common
+.tst 00;32 # TestPoint Test File QAverage
+.tsv 00;32 # Tab Separated Values File Common
+.ttk 00;32 # Catalyst Translation Toolkit QAverage
+.txa 00;32 # Midas ViewPoint Text Array List QAverage
+.txd 00;32 # Game Texture Dictionary QAverage
+.txf 00;32 # Tax Exchange Format QAverage
+.uccapilog 00;32 # Microsoft UCC API Log Common
+.udb 00;32 # Dynamics AX User Database File QAverage
+.ulf 00;32 # Universal List File QAverage
+.ulz 00;32 # USBlyzer Data Capture File QAverage
+.upoi 00;32 # iGO Points of Interest File QAverage
+.uvf 00;32 # Uncertain Value Format QAverage
+.uwl 00;32 # User Word List File Common
+.val 00;32 # Values List QAverage
+.vbpf1 00;32 # Virtual Business - Personal Finance Data File QAverage
+.vcd 00;32 # Value Change Dump File QAverage
+.vce 00;32 # Visual CertExam Exam File QAverage
+.vcf 00;32 # vCard File AbsolutelyVeryCommon
+.vcs 00;32 # vCalendar Event File QAverage
+.vdx 00;32 # Visio Drawing XML File QAverage
+.vi 00;32 # LabVIEW Virtual Instrument File QAverage
+.vmt 00;32 # Valve Material File QAverage
+.voi 00;32 # VOI Group File QAverage
+.vok 00;32 # PocketVok Vocabulary File QAverage
+.vrd 00;32 # Visio Report Definition File QAverage
+.vscontent 00;32 # Visual Studio Content File QAverage
+.vsx 00;32 # Visio Stencil XML File QAverage
+.vtx 00;32 # Visio Template XML File QAverage
+.vxml 00;32 # VoiceXML File Common
+.wab 00;32 # Windows Address Book Common
+.wdb 00;32 # Microsoft Works Database QAverage
+.wea 00;32 # Ecotect Weather File QAverage
+.wgp 00;32 # Web Gallery Project QAverage
+.windowslivecontact 00;32 # Windows Live Contacts File Common
+.wjr 00;32 # ReGet Deluxe Data File QAverage
+.wk1 00;32 # Lotus Worksheet QAverage
+.wk2 00;32 # Lotus 2 Worksheet QAverage
+.wk3 00;32 # Lotus 3 Worksheet QAverage
+.wk4 00;32 # Lotus 4 Worksheet QAverage
+.wk5 00;32 # Lotus 5 Worksheet QAverage
+.wki 00;32 # Lotus 2 Worksheet QAverage
+.wks 00;32 # Microsoft Works Spreadsheet AbsolutelyVeryCommon
+.wku 00;32 # Lotus 1-2-3 Spreadsheet QAverage
+.wmdb 00;32 # Windows Media Database File QAverage
+.wor 00;32 # MapInfo Workspace File QAverage
+.wpf 00;32 # WordPerfect Form QAverage
+.wtb 00;32 # Win-Test Binary Log File QAverage
+.xdb 00;32 # PowerDesigner Database Definition File QAverage
+.xdp 00;32 # XML Data Package QAverage
+.xem 00;32 # PowerDesigner Model definition File QAverage
+.xfo 00;32 # XSL-FO Formatted Form QAverage
+.xft 00;32 # Adobe Form Designer 5.0 File QAverage
+.xl 00;32 # Excel Spreadsheet QAverage
+.xlc 00;32 # Excel Chart QAverage
+.xlr 00;32 # Microsoft Works Spreadsheet QAverage
+.xls 00;32 # Microsoft Excel Spreadsheet AbsolutelyVeryCommon
+.xlsb 00;32 # Excel Binary Workbook QAverage
+.xlsm 00;32 # Excel 2007 Macro-Enabled Spreadsheet QAverage
+.xlsx 00;32 # Microsoft Excel Open XML Document AbsolutelyVeryCommon
+.xlt 00;32 # Microsoft Excel Template QAverage
+.xltm 00;32 # Excel 2007 Macro-Enabled Spreadsheet Template QAverage
+.xltx 00;32 # Excel 2007 Spreadsheet Template QAverage
+.xlw 00;32 # Microsoft Excel Workbook QAverage
+.xmcd 00;32 # Mathcad Worksheet File QAverage
+.xml 00;32 # XML File AbsolutelyVeryCommon
+.xmlper 00;32 # LeCroy Binary Waveform File QAverage
+.xpg 00;32 # Autoplay Media Studio Exported Page QAverage
+.xpj 00;32 # Micro Planner X-Pert Project File QAverage
+.xpm 00;32 # Micro Planner Manager File QAverage
+.xpt 00;32 # SAS Transport File QAverage
+.xrp 00;32 # RationalPlan Project File QAverage
+.xsl 00;32 # XML Style Sheet Common
+.xslt 00;32 # XSL Transformation QAverage
+.xtm 00;32 # Xtremsplit Data File QAverage
+.yam 00;32 # Yahoo! Auctions Data QAverage
+.zdb 00;32 # Quicken Online File QAverage
+.zdc 00;32 # CD Catalog Expert Database File QAverage
+.zmc 00;32 # ZoneAlarm Quarantine File QAverage
+.zpl 00;32 # Zoom Player Play List QAverage
+
+# VIDEO
+.3g2 01;38;5;57 # 3GPP2 Multimedia File AbsolutelyVeryCommon
+.3gp 01;38;5;57 # 3GPP Multimedia File AbsolutelyVeryCommon
+.3gp2 01;38;5;57 # 3GPP Multimedia File QAverage
+.3gpp 01;38;5;57 # 3GPP Media File QAverage
+.3mm 01;38;5;57 # 3D Movie Maker Movie Project QAverage
+.aep 01;38;5;57 # After Effects Project QAverage
+.ajp 01;38;5;57 # CCTV Video File QAverage
+.amv 01;38;5;57 # Anime Music Video File QAverage
+.amx 01;38;5;57 # Adobe Motion Exchange File QAverage
+.arf 01;38;5;57 # WebEx Advanced Recording File QAverage
+.asf 01;38;5;57 # Advanced Systems Format File AbsolutelyVeryCommon
+.asx 01;38;5;57 # Microsoft ASF Redirector File AbsolutelyVeryCommon
+.avb 01;38;5;57 # Avid Bin File QAverage
+.avi 01;38;5;57 # Audio Video Interleave File AbsolutelyVeryCommon
+.avs 01;38;5;57 # AviSynth Script File QAverage
+.axm 01;38;5;57 # AXMEDIS Object QAverage
+.bik 01;38;5;57 # BINK Video File QAverage
+.bix 01;38;5;57 # Kodicom Video File QAverage
+.bsf 01;38;5;57 # Blu-ray AVC Video File QAverage
+.byu 01;38;5;57 # Brigham Young University Movie QAverage
+.camrec 01;38;5;57 # Camtasia Studio Screen Recording QAverage
+.cvc 01;38;5;57 # cVideo QAverage
+.d2v 01;38;5;57 # DVD2AVI File QAverage
+.d3v 01;38;5;57 # Datel Video File QAverage
+.dce 01;38;5;57 # DriveCam Video QAverage
+.dir 01;38;5;57 # Adobe Director Movie QAverage
+.divx 01;38;5;57 # DivX-Encoded Movie File Common
+.dmb 01;38;5;57 # Digital Multimedia Broadcasting File QAverage
+.dpg 01;38;5;57 # Nintendo DS Movie File QAverage
+.dv 01;38;5;57 # Digital Video File QAverage
+.dvr-ms 01;38;5;57 # Microsoft Digital Video Recording Common
+.dvx 01;38;5;57 # DivX Video File QAverage
+.dxr 01;38;5;57 # Protected Macromedia Director Movie QAverage
+.evo 01;38;5;57 # HD DVD Video File QAverage
+.eye 01;38;5;57 # Eyemail Video Recording File QAverage
+.f4v 01;38;5;57 # Flash MP4 Video File Common
+.fbr 01;38;5;57 # FlashBack Screen Recording Common
+.fbz 01;38;5;57 # FlashBack Screen Recorder Movie QAverage
+.fcp 01;38;5;57 # Final Cut Project QAverage
+.flc 01;38;5;57 # FLIC Animation QAverage
+.flh 01;38;5;57 # FLIC Animation File QAverage
+.fli 01;38;5;57 # FLIC Animation QAverage
+.flv 01;38;5;57 # Flash Video File AbsolutelyVeryCommon
+.flx 01;38;5;57 # FLIC Animation QAverage
+.gl 01;38;5;57 # GRASP Animation QAverage
+.grasp 01;38;5;57 # GRASP Animation QAverage
+.hdmov 01;38;5;57 # QuickTime HD Movie File Common
+.hkm 01;38;5;57 # Havok Movie File QAverage
+.ifo 01;38;5;57 # DVD-Video Disc Information File QAverage
+.imovieproj 01;38;5;57 # iMovie Project File QAverage
+.imovieproject 01;38;5;57 # iMovie Project QAverage
+.ivf 01;38;5;57 # Indeo Video Format File QAverage
+.ivr 01;38;5;57 # Internet Video Recording QAverage
+.ivs 01;38;5;57 # Internet Streaming Video QAverage
+.izz 01;38;5;57 # Isadora Media Control Project QAverage
+.izzy 01;38;5;57 # Isadora Project QAverage
+.m1pg 01;38;5;57 # iFinish Video Clip QAverage
+.m21 01;38;5;57 # MPEG-21 File QAverage
+.m2t 01;38;5;57 # HDV Video File QAverage
+.m2ts 01;38;5;57 # Blu-ray BDAV Video File QAverage
+.m2v 01;38;5;57 # MPEG-2 Video QAverage
+.m4u 01;38;5;57 # MPEG-4 Playlist QAverage
+.m4v 01;38;5;57 # iTunes Video File Common
+.mgv 01;38;5;57 # PSP Video File QAverage
+.mj2 01;38;5;57 # Motion JPEG 2000 Video Clip QAverage
+.mjp 01;38;5;57 # MJPEG Video File QAverage
+.mkv 01;38;5;57 # Matroska Video File Common
+.mnv 01;38;5;57 # PlayStation Movie File QAverage
+.moi 01;38;5;57 # MOI Video File Common
+.moov 01;38;5;57 # Apple QuickTime Movie QAverage
+.mov 01;38;5;57 # Apple QuickTime Movie AbsolutelyVeryCommon
+.mp21 01;38;5;57 # MPEG-21 Multimedia File QAverage
+.mp4 01;38;5;57 # MPEG-4 Video File AbsolutelyVeryCommon
+.mpeg 01;38;5;57 # MPEG Movie Common
+.mpg 01;38;5;57 # MPEG Video File AbsolutelyVeryCommon
+.mqv 01;38;5;57 # Sony Movie Format File QAverage
+.msdvd 01;38;5;57 # Windows DVD Maker Project File QAverage
+.msh 01;38;5;57 # Visual Communicator Project File QAverage
+.mswmm 01;38;5;57 # Windows Movie Maker Project QAverage
+.mts 01;38;5;57 # AVCHD Video File Common
+.mtv 01;38;5;57 # MTV Video Format File QAverage
+.mvb 01;38;5;57 # Multimedia Viewer Book Source File QAverage
+.mvc 01;38;5;57 # Movie Collector Catalog QAverage
+.mvd 01;38;5;57 # Movie Edit Pro Video Project QAverage
+.mxf 01;38;5;57 # Material Exchange Format File Common
+.nsv 01;38;5;57 # Nullsoft Streaming Video File QAverage
+.nvc 01;38;5;57 # NeroVision Express Project File QAverage
+.ogm 01;38;5;57 # Ogg Media File Common
+.ogv 01;38;5;57 # Ogg Vorbis Video File QAverage
+.piv 01;38;5;57 # Pivot Stickfigure Animation QAverage
+.playlist 01;38;5;57 # CyberLink PowerDVD Playlist QAverage
+.pmf 01;38;5;57 # PSP Movie File QAverage
+.prel 01;38;5;57 # Premiere Elements Project File QAverage
+.pro 01;38;5;57 # ProPresenter Export File QAverage
+.prproj 01;38;5;57 # Premiere Pro Project QAverage
+.pxv 01;38;5;57 # Pixbend Media File QAverage
+.qt 01;38;5;57 # Apple QuickTime Movie Common
+.qtch 01;38;5;57 # QuickTime Cache File QAverage
+.qtl 01;38;5;57 # QuickTime Link File QAverage
+.qtz 01;38;5;57 # Quartz Composer File QAverage
+.rcproject 01;38;5;57 # iMovie '08 Project Common
+.rec 01;38;5;57 # Topfield PVR Recording QAverage
+.rm 01;38;5;57 # Real Media File AbsolutelyVeryCommon
+.rmvb 01;38;5;57 # RealMedia Variable Bit Rate File Common
+.roq 01;38;5;57 # Id Software Game Video QAverage
+.rp 01;38;5;57 # RealPix Clip QAverage
+.rts 01;38;5;57 # RealPlayer Streaming Media QAverage
+.rum 01;38;5;57 # Bink Video Subtitle File QAverage
+.rv 01;38;5;57 # Real Video File QAverage
+.sbk 01;38;5;57 # SWiSH Project Backup File QAverage
+.scm 01;38;5;57 # ScreenCam Screen Recording Common
+.scn 01;38;5;57 # Pinnacle Studio Scene File QAverage
+.sfvidcap 01;38;5;57 # Sonic Foundry Video Capture File QAverage
+.smi 01;38;5;57 # SMIL Presentation QAverage
+.smil 01;38;5;57 # SMIL Presentation File Common
+.smk 01;38;5;57 # Smacker Compressed Movie File QAverage
+.spl 01;38;5;57 # FutureSplash Animation QAverage
+.srt 01;38;5;57 # SubRip Subtitle File Common
+.ssm 01;38;5;57 # Standard Streaming Metafile QAverage
+.stx 01;38;5;57 # Pinnacle Studio Project File Common
+.svi 01;38;5;57 # Samsung Video File QAverage
+.swf 01;38;5;57 # Flash Movie AbsolutelyVeryCommon
+.swi 01;38;5;57 # SWiSH Project File QAverage
+.swt 01;38;5;57 # Flash Generator Template QAverage
+.tda3mt 01;38;5;57 # DivX Author Template File QAverage
+.tivo 01;38;5;57 # TiVo Video File QAverage
+.tod 01;38;5;57 # JVC Everio Video Capture File QAverage
+.tp 01;38;5;57 # Beyond TV Transport Stream File QAverage
+.tpr 01;38;5;57 # TMPGEnc Project File QAverage
+.trp 01;38;5;57 # HD Video Transport Stream QAverage
+.ts 01;38;5;57 # Video Transport Stream File Common
+.vc1 01;38;5;57 # VC-1 Video File QAverage
+.vdo 01;38;5;57 # VDOLive Media File QAverage
+.veg 01;38;5;57 # Vegas Video Project QAverage
+.vf 01;38;5;57 # Vegas Movie Studio Project File QAverage
+.vgz 01;38;5;57 # DigitalVDO Compressed Video File QAverage
+.vid 01;38;5;57 # Generic Video File QAverage
+.viewlet 01;38;5;57 # Qarbon Viewlet QAverage
+.viv 01;38;5;57 # VivoActive Video File QAverage
+.vivo 01;38;5;57 # VivoActive Video File QAverage
+.vlab 01;38;5;57 # VisionLab Studio Project File QAverage
+.vob 01;38;5;57 # DVD Video Object File AbsolutelyVeryCommon
+.vp6 01;38;5;57 # TrueMotion VP6 Video File QAverage
+.vp7 01;38;5;57 # TrueMotion VP7 Video File QAverage
+.vro 01;38;5;57 # DVD Video Recording Format Common
+.w32 01;38;5;57 # WinCAPs Subtitle File QAverage
+.wcp 01;38;5;57 # WinDVD Creator Project File QAverage
+.wm 01;38;5;57 # Windows Media File QAverage
+.wmd 01;38;5;57 # Windows Media Download Package QAverage
+.wmmp 01;38;5;57 # Windows Movie Maker Project File QAverage
+.wmv 01;38;5;57 # Windows Media Video File AbsolutelyVeryCommon
+.wmx 01;38;5;57 # Windows Media Redirector QAverage
+.wvx 01;38;5;57 # Windows Media Video Redirector QAverage
+.xvid 01;38;5;57 # Xvid-Encoded Video File Common
+.yuv 01;38;5;57 # YUV Video File QAverage
+.zm1 01;38;5;57 # ZSNES Movie # 1 File QAverage
+.zm2 01;38;5;57 # ZSNES Movie # 2 File QAverage
+.zm3 01;38;5;57 # ZSNES Movie # 3 File QAverage
+.zmv 01;38;5;57 # ZSNES Movie File QAverage
+
+# AUDIO
+.4mp 00;36 # 4-MP3 Database File QAverage
+.669 00;36 # UNIS Composer 669 Module QAverage
+.6cm 00;36 # Six Channel Module QAverage
+.8cm 00;36 # Eight Channel Module QAverage
+.8med 00;36 # Amiga OctaMed Music File QAverage
+.8svx 00;36 # Amiga 8-Bit Sound File QAverage
+.a2m 00;36 # AdLib Tracker 2 File QAverage
+.aa 00;36 # Audible Audio Book File QAverage
+.aa3 00;36 # ATRAC Audio File Common
+.aac 00;36 # Advanced Audio Coding File AbsolutelyVeryCommon
+.aax 00;36 # Audible Enhanced Audiobook File QAverage
+.abc 00;36 # ABC Music Notation QAverage
+.ac3 00;36 # Audio Codec 3 File QAverage
+.acd 00;36 # ACID Project File QAverage
+.act 00;36 # ADPCM Compressed Audio File QAverage
+.adg 00;36 # Ableton Device Group QAverage
+.ahx 00;36 # WinAHX Tracker Module QAverage
+.aif 00;36 # Audio Interchange File Format AbsolutelyVeryCommon
+.aifc 00;36 # Compressed Audio Interchange File QAverage
+.aiff 00;36 # Audio Interchange File Format QAverage
+.ais 00;36 # Velvet Studio Instrument QAverage
+.akp 00;36 # Akai Sampler File QAverage
+.al 00;36 # A-Law Compressed Sound Format QAverage
+.alaw 00;36 # A-Law Compressed Sound Format QAverage
+.all 00;36 # Cubasis Project File QAverage
+.amf 00;36 # Advanced Module File QAverage
+.amr 00;36 # Adaptive Multi-Rate Codec File QAverage
+.ams 00;36 # Extreme Tracker Module QAverage
+.aob 00;36 # DVD-Audio Audio Object File QAverage
+.ape 00;36 # Monkey's Audio Lossless Audio File QAverage
+.ase 00;36 # Velvet Studio Sample QAverage
+.au 00;36 # Audio File QAverage
+.aud 00;36 # Video Game Compressed Audio File QAverage
+.aup 00;36 # Audacity Project File QAverage
+.avr 00;36 # Audio Visual Research File QAverage
+.band 00;36 # GarageBand Project File QAverage
+.bap 00;36 # Blaze Audio Wave Information File QAverage
+.bdd 00;36 # CARA Sound Radiation Data File QAverage
+.bun 00;36 # Cakewalk Bundle File QAverage
+.bwf 00;36 # Broadcast Wave File QAverage
+.caf 00;36 # Core Audio File Common
+.cda 00;36 # CD Audio Track Shortcut QAverage
+.cidb 00;36 # iTunes CD Information File QAverage
+.copy 00;36 # Sony Ericsson Protected Content File QAverage
+.cpr 00;36 # Cubase Project Common
+.csh 00;36 # Cubase Waveform File QAverage
+.cwp 00;36 # Cakewalk SONAR Project QAverage
+.d00 00;36 # OPL2 FM Audio File QAverage
+.d01 00;36 # OPL2 FM Audio File QAverage
+.dct 00;36 # Dictation Audio File QAverage
+.dewf 00;36 # SoundEdit Recorded Instrument QAverage
+.df2 00;36 # Defractor 2 Instrument QAverage
+.dfc 00;36 # Defractor Instrument QAverage
+.dig 00;36 # Digilink Audio File QAverage
+.dls 00;36 # Downloadable Sounds File QAverage
+.dm 00;36 # DRM Delivery Message QAverage
+.dmf 00;36 # Delusion Digital Music File QAverage
+.dsf 00;36 # Delusion Digital Sound File QAverage
+.dsm 00;36 # Digital Sound Module QAverage
+.dsp 00;36 # Dynamic Studio Professional Module QAverage
+.dss 00;36 # Digital Speech Standard File QAverage
+.dtm 00;36 # DigiTrakker Module QAverage
+.dts 00;36 # DTS Encoded Audio File QAverage
+.dvf 00;36 # Sony Digital Voice File QAverage
+.dwd 00;36 # DiamondWare Digital Audio File QAverage
+.ear 00;36 # Eyemail Audio Recording QAverage
+.efa 00;36 # Ensoniq ASR File QAverage
+.efe 00;36 # Ensoniq EPS File QAverage
+.efk 00;36 # Ensoniq KT File QAverage
+.efq 00;36 # Ensoniq SQ1/SQ2/KS-32 File QAverage
+.efs 00;36 # Ensoniq SQ-80 File QAverage
+.efv 00;36 # Ensoniq VFX-SD File QAverage
+.esps 00;36 # ESPS Sampled Data File QAverage
+.f2r 00;36 # Farandoyle Linear Module File QAverage
+.f32 00;36 # Raw 32-Bit Audio File QAverage
+.f3r 00;36 # Farandoyle Blocked Module File QAverage
+.f64 00;36 # Raw 64-Bit Audio File QAverage
+.far 00;36 # Farandole Composer Module QAverage
+.fff 00;36 # Gravis UltraSound Sound Bank QAverage
+.flac 00;36 # Free Lossless Audio Codec File Common
+.fsm 00;36 # Farandole Composer WaveSample File QAverage
+.fzb 00;36 # Casio FZ-1 Bank Dump QAverage
+.fzf 00;36 # Casio FZ-1 Full Dump QAverage
+.fzv 00;36 # Casio FZ-1 Voice Dump QAverage
+.g721 00;36 # G.721 Audio File QAverage
+.g723 00;36 # G.723 Audio File QAverage
+.g726 00;36 # G.726 Audio File QAverage
+.gig 00;36 # Tascam GigaSampler File QAverage
+.gp5 00;36 # Guitar Pro 5 Tablature File QAverage
+.gpk 00;36 # WaveLab Audio Peak File QAverage
+.gsm 00;36 # Global System for Mobile Audio File QAverage
+.iff 00;36 # Interchange File Format AbsolutelyVeryCommon
+.iti 00;36 # Impulse Tracker Instrument QAverage
+.its 00;36 # Impulse Tracker Sample QAverage
+.jam 00;36 # JAM Musical Score QAverage
+.k25 00;36 # Kurzweil K2500 File QAverage
+.k26 00;36 # Kurzweil K2600 File QAverage
+.kar 00;36 # Karaoke MIDI File QAverage
+.kin 00;36 # Kinetic Music Project QAverage
+.koz 00;36 # Audiokoz Music File QAverage
+.krz 00;36 # Kurzweil K2000 File QAverage
+.ksf 00;36 # Korg Trinity/Triton Sample File QAverage
+.kt3 00;36 # Battery 3 Drum Kit File QAverage
+.ktp 00;36 # Kinetic Project Template QAverage
+.la 00;36 # Lossless Audio File QAverage
+.lso 00;36 # Logic Audio Project QAverage
+.lwv 00;36 # Linguistically Enhanced Sound File QAverage
+.m3u 00;36 # Media Playlist File AbsolutelyVeryCommon
+.m4a 00;36 # Apple Lossless Audio File Common
+.m4b 00;36 # MPEG-4 Audio Book File Common
+.m4p 00;36 # iTunes Music Store Audio File QAverage
+.m4r 00;36 # iPhone Ringtone File Common
+.ma1 00;36 # Monarch Audio File QAverage
+.med 00;36 # Amiga MED Sound File QAverage
+.mid 00;36 # MIDI File AbsolutelyVeryCommon
+.midi 00;36 # MIDI File AbsolutelyVeryCommon
+.miniusf 00;36 # Nintendo 64 Song File QAverage
+.mka 00;36 # Matroska Audio File QAverage
+.mmf 00;36 # Synthetic Music Mobile Application File QAverage
+.mo3 00;36 # MO3 Audio File QAverage
+.mod 00;36 # Amiga Music Module File Common
+.mp2 00;36 # MPEG Layer II Compressed Audio File QAverage
+.mp3 00;36 # MP3 Audio File AbsolutelyVeryCommon
+.mpa 00;36 # MPEG-2 Audio File AbsolutelyVeryCommon
+.mpc 00;36 # Musepack Compressed Audio File QAverage
+.mpd 00;36 # File List Creator Playlist QAverage
+.mpga 00;36 # MPEG-1 Layer 3 Audio File QAverage
+.mpu 00;36 # MPEG Layer 3 Audio File QAverage
+.mp_ 00;36 # Mobile Phone Sound File QAverage
+.mte 00;36 # MadTracker 2 Envelope QAverage
+.mti 00;36 # MadTracker Instrument QAverage
+.mtm 00;36 # MultiTracker Module QAverage
+.mtp 00;36 # MadTracker 2 Pattern QAverage
+.mus 00;36 # Finale Notation File Format QAverage
+.nap 00;36 # Napster Secured Music File QAverage
+.nki 00;36 # KONTAKT Instrument File QAverage
+.nra 00;36 # Nero Audio Compilation QAverage
+.nrt 00;36 # Nokia Ringtone QAverage
+.nsa 00;36 # Nullsoft Streaming Audio File QAverage
+.nst 00;36 # NoiseTracker Module QAverage
+.ntn 00;36 # NOTION Song File QAverage
+.nwc 00;36 # NoteWorthy Composer File QAverage
+.odm 00;36 # OverDrive Media File QAverage
+.oga 00;36 # Ogg Vorbis Audio File QAverage
+.ogg 00;36 # Ogg Vorbis Compressed Audio File Common
+.okt 00;36 # Oktalyzer Module QAverage
+.oma 00;36 # Sony OpenMG Music File QAverage
+.omf 00;36 # Open Media Framework File QAverage
+.omg 00;36 # OpenMG Audio File QAverage
+.omx 00;36 # OtsAV Media Library Information File QAverage
+.ove 00;36 # Overture Musical Score QAverage
+.pac 00;36 # SBStudio II Song File QAverage
+.pat 00;36 # Gravis UltraSound GF1 Patch File QAverage
+.pbf 00;36 # Pinnacle Sample Bank QAverage
+.pca 00;36 # Perfect Clarity Audio QAverage
+.pcg 00;36 # Korg Instrument Bank File QAverage
+.pcm 00;36 # Pulse Code Modulation QAverage
+.peak 00;36 # Steinberg Peak File QAverage
+.phy 00;36 # PhyMod Physical Modeling Data QAverage
+.pk 00;36 # Audition Peak File QAverage
+.pla 00;36 # Sansa Playlist File QAverage
+.pls 00;36 # Audio Playlist QAverage
+.pna 00;36 # PhatNoise Audio File QAverage
+.psf 00;36 # Portable Sound File QAverage
+.ptf 00;36 # Pro Tools 7 Session File Common
+.pts 00;36 # Pro Tools Session QAverage
+.pvc 00;36 # Panasonic VM1 Voice File QAverage
+.qcp 00;36 # PureVoice Audio File QAverage
+.r 00;36 # Right Audio Channel File QAverage
+.r1m 00;36 # RealOne Streaming Media File QAverage
+.ra 00;36 # Real Audio File AbsolutelyVeryCommon
+.ram 00;36 # Real Audio Media Common
+.raw 00;36 # Raw Audio Data QAverage
+.rbs 00;36 # Rebirth Song File QAverage
+.rex 00;36 # ReCycle Loop File QAverage
+.rfl 00;36 # Reason ReFill Sound Bank QAverage
+.rmf 00;36 # Rich Music Format QAverage
+.rmi 00;36 # RMID MIDI File QAverage
+.rmj 00;36 # Real Media Jukebox Audio File QAverage
+.rmx 00;36 # RealJukebox Format QAverage
+.rng 00;36 # Nokia Composer Ringtone QAverage
+.rns 00;36 # Reason Song File Common
+.rol 00;36 # Ad Lib Synthesized Instrument QAverage
+.rsn 00;36 # Reason Project File QAverage
+.rso 00;36 # NXT Brick Audio File QAverage
+.rti 00;36 # Real Tracker Instrument QAverage
+.rtm 00;36 # Real Tracker Module QAverage
+.s3i 00;36 # Scream Tracker 3 Instrument QAverage
+.sam 00;36 # MOD Edit Sample File QAverage
+.sbi 00;36 # Sound Blaster Instrument QAverage
+.sc2 00;36 # Sample Cell II Instrument Definition QAverage
+.sd 00;36 # Sound Designer Audio File QAverage
+.sd2 00;36 # Sound Designer II File QAverage
+.sdx 00;36 # Sample MIDI Dump Exchange QAverage
+.ses 00;36 # Audition Session QAverage
+.sf 00;36 # IRCAM Sound File QAverage
+.sf2 00;36 # SoundFont 2 Sound Bank QAverage
+.sfk 00;36 # Sound Forge Audio Peak File QAverage
+.sfl 00;36 # Sound Forge Sound Data File QAverage
+.shn 00;36 # Shorten Compressed Audio File QAverage
+.sib 00;36 # Sibelius Score Common
+.sid 00;36 # Commodore 64 Music File QAverage
+.smf 00;36 # Standard MIDI File QAverage
+.smp 00;36 # SampleVision Audio Sample Format QAverage
+.snd 00;36 # Sound File Common
+.sng 00;36 # MIDI Song File QAverage
+.sou 00;36 # SBStudio II Sound File QAverage
+.sppack 00;36 # SPPack Sound Sample QAverage
+.sprg 00;36 # Synclavier Program File QAverage
+.sseq 00;36 # Synclavier Sequence File QAverage
+.ssnd 00;36 # Synclavier Sound File QAverage
+.svx 00;36 # 8SVX Sound File QAverage
+.sw 00;36 # Signed Word Audio File QAverage
+.swa 00;36 # ShockWave Audio QAverage
+.syh 00;36 # Synchomatic Instrument QAverage
+.syw 00;36 # Yamaha SY99/SY85 Audio File QAverage
+.syx 00;36 # MIDI System Exclusive Message QAverage
+.td0 00;36 # Akai Teledisk Sound Library QAverage
+.tfmx 00;36 # Final Music System Tracker Module QAverage
+.thx 00;36 # Amiga THX Tracker Music File QAverage
+.toc 00;36 # PSP Audio File QAverage
+.tsp 00;36 # TrueSpeech Audio File QAverage
+.txw 00;36 # Yamaha TX16W Audio File QAverage
+.u 00;36 # AU Audio File QAverage
+.ult 00;36 # UltraTracker Module QAverage
+.uni 00;36 # MikMod UniMOD Module QAverage
+.usf 00;36 # Nintendo 64 Music File QAverage
+.usflib 00;36 # Nintendo 64 Song Library QAverage
+.uw 00;36 # Unsigned Word Audio File QAverage
+.uwf 00;36 # UltraTracker Wave File QAverage
+.vag 00;36 # PlayStation Compressed Sound File QAverage
+.vc3 00;36 # VSampler Soundbank File QAverage
+.vmd 00;36 # Covox Raw Sample QAverage
+.vmf 00;36 # Vocaltec Media File QAverage
+.voc 00;36 # Creative Labs Audio File QAverage
+.vox 00;36 # VoxWare Dialogic Audio File QAverage
+.vpl 00;36 # Karaoke Player Playlist QAverage
+.vqf 00;36 # TwinVQ Audio File QAverage
+.vrf 00;36 # Ventrilo Audio Recording QAverage
+.vyf 00;36 # Samsung Digital Voice Recorder File QAverage
+.w01 00;36 # Yamaha SY Series Wave File QAverage
+.wav 00;36 # WAVE Audio File AbsolutelyVeryCommon
+.wave 00;36 # WAVE Sound File QAverage
+.wax 00;36 # Windows Media Audio Redirect QAverage
+.wfb 00;36 # WaveFront Sound Bank QAverage
+.wfd 00;36 # WaveFront Drum Kit File QAverage
+.wfp 00;36 # WaveFront Program File QAverage
+.wma 00;36 # Windows Media Audio File AbsolutelyVeryCommon
+.wow 00;36 # Grave Composer Music Module QAverage
+.wpk 00;36 # Nero Wave Editor File QAverage
+.wproj 00;36 # Wwise Project QAverage
+.wrk 00;36 # Cakewalk Music Project QAverage
+.wus 00;36 # WUTG Tagged Audio File QAverage
+.wut 00;36 # WUTG Tag File QAverage
+.wv 00;36 # WavPack Audio File QAverage
+.wvc 00;36 # WavPack Correction File QAverage
+.wwu 00;36 # Wwise Work Unit QAverage
+.xfs 00;36 # eRacer Sound File QAverage
+.xi 00;36 # Fasttracker 2 Extended Instrument File QAverage
+.xm 00;36 # Fasttracker 2 Extended Module QAverage
+.xmf 00;36 # Extensible Music File QAverage
+.xmi 00;36 # Extended MIDI File QAverage
+.xp 00;36 # Fastracker 2 Pattern QAverage
+.xrns 00;36 # Renoise Song File QAverage
+.xspf 00;36 # XSPF Playlist File QAverage
+.xt 00;36 # Fastracker 2 Track QAverage
+.zvd 00;36 # ZyXEL Voice File QAverage
+
+# IMAGE
+.ico 00;35 # Icon AbsolutelyVeryCommon
+.2bp 00;35 # Pocket PC Bitmap Image File QAverage
+.2d 00;35 # VersaCAD 2D Drawing QAverage
+.3da 00;35 # 3D Assembly QAverage
+.3df 00;35 # 3D Format QAverage
+.3dl 00;35 # LightConverse 3D Model File QAverage
+.3dm 00;35 # Rhino 3D Model AbsolutelyVeryCommon
+.3dmf 00;35 # QuickDraw 3D Metafile Common
+.3ds 00;35 # 3D Studio Scene QAverage
+.3dv 00;35 # 3D VRML World QAverage
+.3dx 00;35 # Rhino 3D Model File QAverage
+.8pbs 00;35 # Adobe Photoshop Macintosh File QAverage
+.abm 00;35 # Photo Album Common
+.ac5 00;35 # ArtCut 5 Document QAverage
+.ac6 00;35 # ArtCut 6 Document QAverage
+.acr 00;35 # American College of Radiology Format QAverage
+.adc 00;35 # Scanstudio 16 Color Image QAverage
+.adi 00;35 # AutoCAD Device-Independent Binary Plotter File QAverage
+.afp 00;35 # Advanced Function Presentation File QAverage
+.agif 00;35 # Active GIF Creator Project QAverage
+.agp 00;35 # ArtGem Project File QAverage
+.ai 00;35 # Adobe Illustrator File AbsolutelyVeryCommon
+.amu 00;35 # Sony Photo Album QAverage
+.an8 00;35 # Anim8or File QAverage
+.anm 00;35 # 3D Animation File QAverage
+.apng 00;35 # Animated Portable Network Graphic QAverage
+.ard 00;35 # ArtiosCAD Workspace File QAverage
+.arr 00;35 # Amber Graphic File QAverage
+.art 00;35 # Art Document Common
+.asat 00;35 # Assemble SAT 3D Model File QAverage
+.awd 00;35 # Artweaver Document QAverage
+.bcf 00;35 # Business Card Designer Pro File QAverage
+.bcp 00;35 # Business Card Designer Plus File QAverage
+.bip 00;35 # Character Studio Biped File QAverage
+.biz 00;35 # Broderbund Business Card File QAverage
+.blend 00;35 # Blender 3D Data File Common
+.blkrt 00;35 # Block Artist Image File QAverage
+.blz 00;35 # Compressed Bitmap Graphic QAverage
+.bmc 00;35 # Embroidery Image File QAverage
+.bmf 00;35 # Binary Material File QAverage
+.bmp 00;35 # Bitmap Image File AbsolutelyVeryCommon
+.br3 00;35 # Bryce 3 Scene File QAverage
+.br4 00;35 # Bryce 4 Scene File QAverage
+.br5 00;35 # Bryce 3D Scene File Common
+.bro 00;35 # CreataCard Brochure Project QAverage
+.btw 00;35 # BarTender Label QAverage
+.bvh 00;35 # Biovision Hierarchy Animation File QAverage
+.c4d 00;35 # Cinema 4D Model File QAverage
+.cad 00;35 # BobCAD-CAM File QAverage
+.cag 00;35 # Clip Art Gallery QAverage
+.cal 00;35 # Calendar File QAverage
+.cals 00;35 # CALS Raster Graphic File QAverage
+.can 00;35 # Canon Navigator Fax Document QAverage
+.catpart 00;35 # CATIA V5 Part Document QAverage
+.cd2 00;35 # Click'N Design 3d File QAverage
+.cd5 00;35 # Chasys Draw Image File QAverage
+.cdr 00;35 # CorelDRAW Image File Common
+.cdt 00;35 # CorelDraw Template QAverage
+.ce 00;35 # Computer Eyes Image QAverage
+.cgm 00;35 # Computer Graphics Metafile QAverage
+.cil 00;35 # ClipArt Gallery Packaged File QAverage
+.cin 00;35 # Kodak Cineon Bitmap File QAverage
+.cit 00;35 # Intergraph Bitmap Image File QAverage
+.cld 00;35 # Canon CD Label Template QAverage
+.cm2 00;35 # Poser Camera Set File QAverage
+.cmp 00;35 # Solid Edge Wire Harness File QAverage
+.cmx 00;35 # Corel Metafile Exchange Image File QAverage
+.cmz 00;35 # Compressed Poser Camera Set File QAverage
+.comicdoc 00;35 # Comic Life Document QAverage
+.cpc 00;35 # CPC Compressed Image File QAverage
+.cpg 00;35 # Manga Studio Page File QAverage
+.cph 00;35 # Corel Print House File QAverage
+.cps 00;35 # Corel Photo House File QAverage
+.cpt 00;35 # Corel Photo-Paint Document Common
+.cr2 00;35 # Canon Raw Image File Common
+.crz 00;35 # Compressed Poser Character Rigging File QAverage
+.csd 00;35 # Compact Shared Document QAverage
+.csf 00;35 # Content Secure Format QAverage
+.csm 00;35 # Character Studio Marker File QAverage
+.cut 00;35 # Dr. Halo Bitmap Image File QAverage
+.cv5 00;35 # Canvas 5 Drawing File QAverage
+.cvg 00;35 # Calamus Vector Graphic File QAverage
+.cvi 00;35 # Canvas Image Format QAverage
+.cvs 00;35 # Canvas 4 Drawing File QAverage
+.dae 00;35 # Digital Asset Exchange File QAverage
+.dc 00;35 # DesignCAD Design File QAverage
+.dcd 00;35 # DesignCAD Drawing QAverage
+.dcm 00;35 # DICOM Image File Common
+.dcr 00;35 # Kodak RAW Image File QAverage
+.dcs 00;35 # Desktop Color Separation File QAverage
+.dcx 00;35 # FAXserve Fax Document QAverage
+.ddrw 00;35 # ClarisDraw Drawing QAverage
+.design 00;35 # Microsoft Expression Design Drawing QAverage
+.dff 00;35 # RenderWare Model File QAverage
+.dfx 00;35 # Drafix CAD File QAverage
+.dgn 00;35 # MicroStation Design File Common
+.dib 00;35 # Device Independent Bitmap File Common
+.djvu 00;35 # DjVu Image QAverage
+.dng 00;35 # Digital Negative Image File Common
+.dpd 00;35 # Ovation Pro File QAverage
+.dpp 00;35 # DrawPlus Drawing File QAverage
+.dpr 00;35 # Digital InterPlot File QAverage
+.dpx 00;35 # Digital Picture Exchange File QAverage
+.drw 00;35 # Drawing File AbsolutelyVeryCommon
+.drwdot 00;35 # SolidWorks Drawing Template QAverage
+.dtp 00;35 # Publish-iT Document QAverage
+.dtw 00;35 # Desktop Wallpaper QAverage
+.dvl 00;35 # Virtual Library File QAverage
+.dwf 00;35 # Design Web Format File QAverage
+.dwfx 00;35 # Design Web Format XPS File QAverage
+.dwg 00;35 # AutoCAD Drawing Database File AbsolutelyVeryCommon
+.dxb 00;35 # Drawing Exchange Binary QAverage
+.dxf 00;35 # Drawing Exchange Format File AbsolutelyVeryCommon
+.edrw 00;35 # SolidWorks eDrawings File Common
+.egg 00;35 # Panda3D Model File QAverage
+.emf 00;35 # Enhanced Windows Metafile Common
+.emz 00;35 # Windows Compressed Enhanced Metafile Common
+.enc 00;35 # Copysafe Protected PDF File QAverage
+.eps 00;35 # Encapsulated PostScript File AbsolutelyVeryCommon
+.exif 00;35 # Exchangeable Image Information File Common
+.fac 00;35 # FACE Graphic QAverage
+.face 00;35 # FACE Graphic QAverage
+.fax 00;35 # Fax Document QAverage
+.fbx 00;35 # Autodesk FBX Interchange File QAverage
+.fc2 00;35 # Poser Face Pose File QAverage
+.fcw 00;35 # FastCAD Windows Drawing QAverage
+.fcz 00;35 # Compressed Poser Face Pose File QAverage
+.fd2 00;35 # PictureMate Borders File QAverage
+.fh9 00;35 # FreeHand 9 Drawing File QAverage
+.fhd 00;35 # FreeHand Drawing File QAverage
+.fig 00;35 # Xfig Drawing QAverage
+.fits 00;35 # Flexible Image Transport System QAverage
+.fpf 00;35 # IKEA Home Planner File Common
+.fpx 00;35 # FlashPix Bitmap Image File QAverage
+.fs 00;35 # FlexiSIGN Document QAverage
+.fxg 00;35 # Flash XML Graphics File Common
+.g 00;35 # BRL-CAD Geometry File QAverage
+.gcd 00;35 # Generic CADD Drawing File QAverage
+.gds 00;35 # Graphic Design System QAverage
+.gif 00;35 # Graphical Interchange Format File AbsolutelyVeryCommon
+.gks 00;35 # Graphics Kernel System QAverage
+.gmf 00;35 # Geology Multi-File QAverage
+.graffle 00;35 # OmniGraffle Drawing QAverage
+.grn 00;35 # Granny 3D File QAverage
+.gry 00;35 # Grayscale Image QAverage
+.gsd 00;35 # Graphtec Vector Graphics File QAverage
+.gxc 00;35 # General CADD Pro Component QAverage
+.gxd 00;35 # General CADD Pro Drawing QAverage
+.hcx 00;35 # ChartXL Chart QAverage
+.hd2 00;35 # Poser Hand Pose File QAverage
+.hdp 00;35 # HD Photo File Common
+.hdr 00;35 # High Dynamic Range Image File QAverage
+.hdz 00;35 # Compressed Poser Hand Pose File QAverage
+.hf 00;35 # HF Image QAverage
+.hip 00;35 # Houdini Project File QAverage
+.hipnc 00;35 # Houdini Apprentice File QAverage
+.hmk 00;35 # Hallmark Card Studio File QAverage
+.hpgl 00;35 # HP Graphics Language Plotter File QAverage
+.hpi 00;35 # Hemera Photo Objects Image File QAverage
+.hpl 00;35 # HP-GL Plotter File QAverage
+.hr 00;35 # TRS-80 Graphic QAverage
+.hr2 00;35 # Poser Hair File QAverage
+.hrf 00;35 # Hitachi Raster Format QAverage
+.hrz 00;35 # Compressed Poser Hair File QAverage
+.htz4 00;35 # HyperMaker Publication QAverage
+.iam 00;35 # Inventor Assembly File QAverage
+.ic1 00;35 # Low Resolution Imagic Graphic QAverage
+.ic2 00;35 # Medium Resolution Imagic Graphic QAverage
+.ic3 00;35 # High Resolution Imagic Graphic QAverage
+.ica 00;35 # Image Object Content Architecture (IOCA) File QAverage
+.icb 00;35 # Targa ICB Bitmap Image QAverage
+.icn 00;35 # Windows Icon File QAverage
+.idw 00;35 # Inventor Drawing QAverage
+.iges 00;35 # IGES File QAverage
+.igs 00;35 # IGES Drawing File QAverage
+.ilbm 00;35 # Deluxe Paint Graphic QAverage
+.ind 00;35 # InDesign Document QAverage
+.indd 00;35 # Adobe InDesign File AbsolutelyVeryCommon
+.indt 00;35 # InDesign Template QAverage
+.info 00;35 # ZoomBrowser Image Index File QAverage
+.ink 00;35 # Pantone Reference File QAverage
+.int 00;35 # SGI Integer Image QAverage
+.inx 00;35 # InDesign Interchange File Common
+.ipt 00;35 # Inventor Part File QAverage
+.ithmb 00;35 # iPod Photo Thumbnails QAverage
+.j2c 00;35 # JPEG 2000 Code Stream QAverage
+.jas 00;35 # Paint Shop Pro Compressed Graphic QAverage
+.jbf 00;35 # Paint Shop Pro Browser Cache QAverage
+.jbig 00;35 # Joint Bi-level Image Group File QAverage
+.jbr 00;35 # Paint Shop Pro Brushes File QAverage
+.jfi 00;35 # JPEG File Interchange QAverage
+.jia 00;35 # Digital Photo Navigator Album QAverage
+.jng 00;35 # JPEG Network Graphic QAverage
+.jp2 00;35 # JPEG 2000 Core Image File QAverage
+.jpc 00;35 # JPEG 2000 Code Stream File QAverage
+.jpe 00;35 # JPEG Image QAverage
+.jpeg 00;35 # JPEG Image File Common
+.jpg 00;35 # JPEG Image File AbsolutelyVeryCommon
+.jpw 00;35 # World File for JPEG QAverage
+.jpx 00;35 # JPEG 2000 Image File Common
+.jt 00;35 # JT Open CAD File QAverage
+.jtf 00;35 # JPEG Tagged Interchange Format QAverage
+.kdc 00;35 # Kodak Photo-Enhancer File QAverage
+.kfx 00;35 # Kofax Image File QAverage
+.kit 00;35 # 20-20 Design File QAverage
+.kmc 00;35 # Kinemac Animation File QAverage
+.kmcobj 00;35 # Kinemac Sprite Object QAverage
+.kodak 00;35 # Kodak Photo CD File QAverage
+.lab 00;35 # WordPerfect Label Definition File QAverage
+.lbm 00;35 # Deluxe Paint Bitmap Image QAverage
+.lin 00;35 # AutoCAD Linetype File QAverage
+.lnd 00;35 # 3D Landscape File Common
+.lt2 00;35 # Poser Light Set File QAverage
+.ltz 00;35 # Compressed Poser Light Set File QAverage
+.lwo 00;35 # LightWave 3D Object File QAverage
+.lws 00;35 # LightWave 3D Scene File QAverage
+.lxf 00;35 # LEGO Digital Designer Model File QAverage
+.ma 00;35 # Maya Project File Common
+.mac 00;35 # MacPaint Image QAverage
+.max 00;35 # PaperPort Scanned Document Common
+.mb 00;35 # Maya Binary Project File Common
+.mbm 00;35 # Multi Bitmap File QAverage
+.mc5 00;35 # Poser 5 Material File QAverage
+.mc6 00;35 # Poser 6 Material File QAverage
+.mcs 00;35 # Mathcad Image QAverage
+.mcx 00;35 # MICRO CADAM-X/6000 Model Data File QAverage
+.mcz 00;35 # Compressed Poser Material File QAverage
+.mdi 00;35 # Microsoft Document Imaging File Common
+.meb 00;35 # PRO100 3D Interior Catalog Element QAverage
+.mesh 00;35 # 3D Mesh Model QAverage
+.mft 00;35 # MediaFACE Project Template QAverage
+.mgf 00;35 # Materials and Geometry Format QAverage
+.mgs 00;35 # MGCSoft Vector Shapes QAverage
+.mic 00;35 # Image Composer File QAverage
+.mip 00;35 # Multiple Image Print File QAverage
+.mix 00;35 # PhotoDraw Image File QAverage
+.mma 00;35 # Master Album Maker Digital Photo Album QAverage
+.mng 00;35 # Multiple Network Graphic Common
+.mnm 00;35 # Character Studio Marker Name File QAverage
+.model 00;35 # CATIA 3D Model FIle QAverage
+.mp 00;35 # Maya PLE Project File QAverage
+.mpf 00;35 # Microsoft Media Package FIle QAverage
+.mrb 00;35 # Multiple Resolution Bitmap QAverage
+.mrw 00;35 # Minolta Raw Image File QAverage
+.ms3d 00;35 # MilkShape 3D Model QAverage
+.msk 00;35 # Paint Shop Pro Mask QAverage
+.msp 00;35 # Microsoft Paint Bitmap Image QAverage
+.mtx 00;35 # MetaStream Scene File QAverage
+.mtz 00;35 # Compressed MetaStream Scene File QAverage
+.nav 00;35 # MSN Application Extension QAverage
+.ncd 00;35 # Nero Cover Designer Document QAverage
+.neo 00;35 # NeoChrome Bitmap Image QAverage
+.nff 00;35 # Neutral File Format QAverage
+.nif 00;35 # Gamebryo Image QAverage
+.nrw 00;35 # Nikon Raw Image File QAverage
+.ntc 00;35 # Nikon Capture Custom Curves QAverage
+.ntf 00;35 # MediaFace II CD Label QAverage
+.obj 00;35 # 3D Object File Common
+.odc 00;35 # OpenDocument Chart QAverage
+.odg 00;35 # OpenDocument Graphic QAverage
+.odi 00;35 # OpenDocument Image QAverage
+.odif 00;35 # Open Document Interchange Format QAverage
+.off 00;35 # Object File Format QAverage
+.ola 00;35 # Online Access File QAverage
+.opd 00;35 # OmniPage Document QAverage
+.orf 00;35 # Olympus RAW File QAverage
+.ota 00;35 # OTA Bitmap QAverage
+.otb 00;35 # Nokia Over The Air Bitmap QAverage
+.otc 00;35 # OpenDocument Chart Template QAverage
+.otg 00;35 # OpenDocument Graphic Template QAverage
+.oti 00;35 # OpenDocument Image Template QAverage
+.ovw 00;35 # Cubase WAVE File Overview QAverage
+.p21 00;35 # Express STEP Data Model File QAverage
+.p2z 00;35 # Compressed Poser Pose File QAverage
+.p3d 00;35 # Peak3D 3D Graphics File QAverage
+.p65 00;35 # PageMaker 6.5 Document QAverage
+.pa 00;35 # Print Artist Project QAverage
+.pal 00;35 # Dr. Halo Color Palette QAverage
+.pap 00;35 # PanoramaStudio Project File QAverage
+.pbm 00;35 # Portable Bitmap Image QAverage
+.pc1 00;35 # Degas Elite Low Res Image File QAverage
+.pc2 00;35 # Degas Elite Medium Res Image File QAverage
+.pc3 00;35 # Degas Elite High Res Image File QAverage
+.pc6 00;35 # PowerCADD 6 Drawing File QAverage
+.pc7 00;35 # PowerCADD 7 Drawing File QAverage
+.pcd 00;35 # Kodak Photo CD Image File QAverage
+.pct 00;35 # Picture File AbsolutelyVeryCommon
+.pcx 00;35 # Paintbrush Bitmap Image File QAverage
+.pd 00;35 # FlexiSIGN 5 Plotter Document QAverage
+.pdg 00;35 # Print Designer GOLD File QAverage
+.pdn 00;35 # Paint.NET Image File QAverage
+.pe4 00;35 # Photo Explorer Thumbnail Archive QAverage
+.pef 00;35 # Pentax Electronic File QAverage
+.pfr 00;35 # Paint Shop Pro Picture Frame QAverage
+.pgm 00;35 # Portable Gray Map Image QAverage
+.pi1 00;35 # Degas Low Resolution Image File QAverage
+.pi2 00;35 # Degas Medium Resolution Image File QAverage
+.pi3 00;35 # Degas High Resolution Image File QAverage
+.pi4 00;35 # DEGAS Image QAverage
+.pi5 00;35 # DEGAS Image QAverage
+.pi6 00;35 # DEGAS Image QAverage
+.pic 00;35 # Generic Picture File QAverage
+.picnc 00;35 # Houdini 3D Compositing Image QAverage
+.pict 00;35 # Picture File QAverage
+.pictclipping 00;35 # Picture Clipping QAverage
+.pix 00;35 # BRL-CAD Raw Image File QAverage
+.pl0 00;35 # 3D Home Architect Foundation Floor Plan QAverage
+.pl1 00;35 # 3D Home Architect Floor Plan QAverage
+.pl2 00;35 # 3D Home Architect Second Level Floor Plan QAverage
+.pln 00;35 # ArchiCAD Project File AbsolutelyVeryCommon
+.plt 00;35 # AutoCAD Plotter Document QAverage
+.ply 00;35 # Polygon Model File QAverage
+.pm 00;35 # Unix XV Graphic File QAverage
+.pm3 00;35 # PageMaker 3 Document QAverage
+.pm4 00;35 # PageMaker 4 Document QAverage
+.pm6 00;35 # PageMaker 6.0 Document QAverage
+.png 00;35 # Portable Network Graphic AbsolutelyVeryCommon
+.pnt 00;35 # MacPaint File QAverage
+.pov 00;35 # POV-Ray Raytracing Format QAverage
+.ppm 00;35 # Portable Pixmap Image File Common
+.ppp 00;35 # Page Plus Publication QAverage
+.ppx 00;35 # PagePlus Template File QAverage
+.ppz 00;35 # Compressed Poser Prop File QAverage
+.prn 00;35 # Printable File QAverage
+.prt 00;35 # Solid Edge Part File QAverage
+.prw 00;35 # Artlantis Shader Preview File QAverage
+.ps 00;35 # PostScript File AbsolutelyVeryCommon
+.psb 00;35 # Photoshop Large Document Format QAverage
+.psd 00;35 # Photoshop Document AbsolutelyVeryCommon
+.psg 00;35 # Page Segment File QAverage
+.psp 00;35 # Paint Shop Pro Image File AbsolutelyVeryCommon
+.pspimage 00;35 # Paint Shop Pro Image QAverage
+.ptg 00;35 # ArtRage Project File QAverage
+.ptx 00;35 # Pentax RAW Image File QAverage
+.pws 00;35 # Print Workshop Image QAverage
+.px 00;35 # Pixel Image File QAverage
+.pxm 00;35 # Pixelmator Image File QAverage
+.pxr 00;35 # Pixar Image File QAverage
+.pz2 00;35 # Poser Pose File QAverage
+.pz3 00;35 # Poser Scene File QAverage
+.pzz 00;35 # Compressed Poser Scene File QAverage
+.qti 00;35 # QuickTime Image File QAverage
+.qtif 00;35 # QuickTime Image File QAverage
+.qxd 00;35 # QuarkXPress Document AbsolutelyVeryCommon
+.qxp 00;35 # QuarkXPress Project File AbsolutelyVeryCommon
+.qxt 00;35 # QuarkXPress Template QAverage
+.raf 00;35 # Fuji RAW Image File QAverage
+.ras 00;35 # Sun Raster Graphic QAverage
+.ray 00;35 # Rayshade Image QAverage
+.rdl 00;35 # MicroStation Redline File QAverage
+.rds 00;35 # Ray Dream Studio Scene File QAverage
+.rgb 00;35 # RGB Bitmap QAverage
+.rif 00;35 # Raster Image File QAverage
+.rix 00;35 # ColorRIX Bitmap Graphic QAverage
+.rle 00;35 # Run Length Encoded Bitmap QAverage
+.rsr 00;35 # Poser Model Preview File QAverage
+.sat 00;35 # ACIS SAT Model File QAverage
+.scg 00;35 # ColorRIX Bitmap Graphic QAverage
+.sci 00;35 # ColorRIX Bitmap Graphic QAverage
+.scp 00;35 # ColorRIX Bitmap Graphic QAverage
+.sct 00;35 # Scitex Continuous Tone File QAverage
+.scu 00;35 # ColorRIX Bitmap Graphic QAverage
+.scv 00;35 # ScanVec CASmate Sign File QAverage
+.sda 00;35 # OpenOffice.org Draw Document QAverage
+.sdm 00;35 # Spatial Data Modeling Language File QAverage
+.sdr 00;35 # SmartDraw Drawing QAverage
+.sdt 00;35 # SmartDraw Template File QAverage
+.sff 00;35 # Structured Fax Format QAverage
+.sgi 00;35 # Silicon Graphics Image File QAverage
+.sh3d 00;35 # Sweet Home 3D Design File QAverage
+.sh3f 00;35 # Sweet Home 3D Model Library QAverage
+.shp 00;35 # Shapes File Common
+.si 00;35 # Softimage Image Format QAverage
+.sim 00;35 # Aurora Image QAverage
+.sk2 00;35 # ChemSketch Drawing QAverage
+.skl 00;35 # Maya Skeleton File QAverage
+.skp 00;35 # SketchUp Document QAverage
+.sldasm 00;35 # SolidWorks Assembly File QAverage
+.slddrt 00;35 # SolidWorks Sheet File QAverage
+.slddrw 00;35 # SolidWorks Drawing File QAverage
+.sldprt 00;35 # SolidWorks Part File QAverage
+.snp 00;35 # Access Report Snapshot QAverage
+.sp 00;35 # SignPlot Traffic Sign File QAverage
+.spc 00;35 # Spectrum 512 Compressed Image QAverage
+.spe 00;35 # WinSpec CCD Capture File QAverage
+.spiff 00;35 # Still Picture Interchange File Format QAverage
+.spp 00;35 # PhotoPlus Picture File QAverage
+.spu 00;35 # Spectrum 512 Image QAverage
+.sr 00;35 # Sun Raster Image File QAverage
+.srf 00;35 # Sony Raw Image File QAverage
+.std 00;35 # StarOffice Drawing Template QAverage
+.step 00;35 # STEP 3D Model QAverage
+.stl 00;35 # Stereolithography File Common
+.sto 00;35 # PRO100 3D Interior Design Project QAverage
+.stp 00;35 # STEP 3D CAD File Common
+.sun 00;35 # Sun Raster Graphic QAverage
+.suniff 00;35 # Sun TAAC Graphic QAverage
+.sup 00;35 # Subtitle Bitmap File QAverage
+.svg 00;35 # Scalable Vector Graphics File AbsolutelyVeryCommon
+.svgz 00;35 # Compressed SVG File Common
+.sxd 00;35 # StarOffice Drawing QAverage
+.taac 00;35 # Sun TAAC Graphic QAverage
+.tcd 00;35 # Technobox CAD Drawing QAverage
+.tct 00;35 # TurboCAD Drawing Template QAverage
+.tcw 00;35 # TurboCAD Drawing File QAverage
+.tddd 00;35 # 3D Data Description QAverage
+.tfw 00;35 # World File for TIFF QAverage
+.tg4 00;35 # Tiled Group 4 Raster Image File QAverage
+.tga 00;35 # Targa Graphic Common
+.thm 00;35 # Thumbnail Image File AbsolutelyVeryCommon
+.thumb 00;35 # JAlbum Thumbnail File QAverage
+.tif 00;35 # Tagged Image File AbsolutelyVeryCommon
+.tiff 00;35 # Tagged Image File Format QAverage
+.tlc 00;35 # The Logo Creator File QAverage
+.tn1 00;35 # Tiny Image (Low Resolution) QAverage
+.tn2 00;35 # Tiny Image (Medium Resolution) QAverage
+.tn3 00;35 # Tiny Image (High Resolution) QAverage
+.tny 00;35 # Atari Tiny Image QAverage
+.trif 00;35 # Tiled Raster Interchange Format QAverage
+.u3d 00;35 # Universal 3D File QAverage
+.ufo 00;35 # Ulead File Object QAverage
+.urt 00;35 # Utah Raster Toolkit File QAverage
+.v 00;35 # Subsampled Raw YUV Image QAverage
+.v3d 00;35 # Visual3D.NET Data File QAverage
+.vff 00;35 # Sun TAAC Graphic File QAverage
+.vic 00;35 # VICAR Image QAverage
+.viff 00;35 # Visualization Image File Format QAverage
+.vna 00;35 # JVC JLIP Image QAverage
+.vsd 00;35 # Visio Drawing File QAverage
+.vss 00;35 # Visio Stencil File QAverage
+.vst 00;35 # Visio Drawing Template QAverage
+.vtf 00;35 # 3DESIGN CAD File QAverage
+.vue 00;35 # Vue Scene File QAverage
+.vvd 00;35 # Vivid 3D Scanner Element File QAverage
+.vwx 00;35 # VectorWorks 2008 Design File QAverage
+.wbmp 00;35 # Wireless Bitmap Image File QAverage
+.wgs 00;35 # Walk-Graph Segment QAverage
+.wi 00;35 # Wavelet Image QAverage
+.wic 00;35 # J Wavelet Image QAverage
+.wmf 00;35 # Windows Metafile QAverage
+.wmp 00;35 # Windows Media Photo File QAverage
+.wnk 00;35 # Wink Screen Capture QAverage
+.wpg 00;35 # WordPerfect Graphic File QAverage
+.wrl 00;35 # VRML World QAverage
+.wrp 00;35 # Geomagic 3D Wrap File QAverage
+.wrz 00;35 # VRML World QAverage
+.x3d 00;35 # Xara3D Project QAverage
+.xar 00;35 # Xara Xtreme Drawing QAverage
+.xbm 00;35 # X11 Bitmap Graphic QAverage
+.xcf 00;35 # GIMP Image File Common
+.xdw 00;35 # Fuji Xerox DocuWorks File QAverage
+.xif 00;35 # ScanSoft Pagis File QAverage
+.xof 00;35 # Reality Lab 3D Image File QAverage
+.xps 00;35 # XML Paper Specification File Common
+.xsi 00;35 # Softimage XSI 3D Image QAverage
+.xwd 00;35 # X Windows Dump QAverage
+.xws 00;35 # Xara Webstyle Graphic QAverage
+.x_b 00;35 # Parasolid Model Part File QAverage
+.x_t 00;35 # Parasolid Model Part File QAverage
+.yaodl 00;35 # Powerflip 3D Image File QAverage
+.ydl 00;35 # Powerflip YAODL 3D Image File QAverage
+.zdl 00;35 # Avery DesignPro Label File QAverage
+.zdp 00;35 # Avery DesignPro Label File QAverage
+.zgm 00;35 # Zenographics Image File QAverage
+.zif 00;35 # Zooming Image Format File QAverage
+.zno 00;35 # Zinio Electronic Magazine File QAverage
+.zt 00;35 # Mental Ray Image Depth File QAverage
+
+# TEXT
+.1st 00;37 # Readme File QAverage
+.abw 00;37 # AbiWord Document QAverage
+.aim 00;37 # AIMMS ASCII Model File QAverage
+.ans 00;37 # ANSI Text File QAverage
+.asc 00;37 # ASCII Text File QAverage
+.ascii 00;37 # ASCII Text File QAverage
+.bad 00;37 # Exchange Badmail File QAverage
+.bdp 00;37 # Exchange Diagnostic Message QAverage
+.bdr 00;37 # Exchange Non-Delivery Report Body File QAverage
+.bean 00;37 # Bean Rich Text Document QAverage
+.bib 00;37 # BibTeX Bibliography Database QAverage
+.bna 00;37 # Barna Word Processor Document QAverage
+.boc 00;37 # EasyWord Big Document QAverage
+.charset 00;37 # Character Set QAverage
+.chord 00;37 # Song Chords File QAverage
+.crwl 00;37 # Windows Crawl File QAverage
+.cyi 00;37 # Clustify Input File QAverage
+.dbt 00;37 # Database Text File QAverage
+.dgs 00;37 # Dagesh Pro Document QAverage
+.diz 00;37 # Description in Zip File QAverage
+.dne 00;37 # Netica Text File QAverage
+.dvi 00;37 # Device Independent Format File QAverage
+.dx 00;37 # DEC WPS Plus File QAverage
+.email 00;37 # Outlook Express Email Message QAverage
+.eml 00;37
+.emlx 00;37 # Mail Message QAverage
+.emulecollection 00;37 # eMule Data File QAverage
+.err 00;37 # Error Log File QAverage
+.etf 00;37 # ENIGMA Transportable File QAverage
+.faq 00;37 # Frequently Asked Questions Document QAverage
+.fb2 00;37 # FictionBook 2.0 File QAverage
+.fbl 00;37 # CADfix Command Level Log File QAverage
+.fdr 00;37 # Final Draft Document QAverage
+.fds 00;37 # Final Draft Secure Copy QAverage
+.flr 00;37 # Flare Decompiled ActionScript File QAverage
+.fpt 00;37 # FileMaker Pro Database Memo File QAverage
+.frt 00;37 # FoxPro Report Memo QAverage
+.fxc 00;37 # FilePackager Configuration QAverage
+.gio 00;37 # Adagio Score QAverage
+.gpn 00;37 # GlidePlan Map Document QAverage
+.gthr 00;37 # Gather Log File QAverage
+.gv 00;37 # GraphcViz DOT File QAverage
+.hht 00;37 # Help and Support Center HHT File QAverage
+.hs 00;37 # Java HelpSet File QAverage
+.imapmbox 00;37 # IMAP Mailbox QAverage
+.ipf 00;37 # OS/2 Help File QAverage
+.jis 00;37 # Japanese Industry Standard Text QAverage
+.klg 00;37 # Log File QAverage
+.kml 00;37 # Keyhole Markup Language QAverage
+.knt 00;37 # KeyNote Note File QAverage
+.kon 00;37 # Yahoo! Widget XML File QAverage
+.kwd 00;37 # KWord Document QAverage
+.latex 00;37 # LaTeX Document QAverage
+.lbt 00;37 # FoxPro Label Memo QAverage
+.lis 00;37 # SQR Output File QAverage
+.lit 00;37 # eBook File Common
+.lnt 00;37 # Laego Note Taker File QAverage
+.log 00;37 # Log File AbsolutelyVeryCommon
+.lp2 00;37 # iLEAP Word Processing Document QAverage
+.lrc 00;37 # Lyrics File QAverage
+.lst 00;37 # Data List Common
+.ltr 00;37 # Letter File QAverage
+.luf 00;37 # Lipikar Uniform Format File QAverage
+.lwp 00;37 # Lotus Word Pro Document QAverage
+.lxfml 00;37 # LEGO Digital Designer XML File QAverage
+.lyt 00;37 # TurboTax Install Log File QAverage
+.lyx 00;37 # LyX Document QAverage
+.man 00;37 # Unix Manual QAverage
+.mbox 00;37 # E-mail Mailbox File QAverage
+.mell 00;37 # Mellel Word Processing File QAverage
+.mellel 00;37 # Mellel Word Processing Document QAverage
+.mnt 00;37 # FoxPro Menu Memo QAverage
+.msg 00;37 # Outlook Mail Message AbsolutelyVeryCommon
+.mwd 00;37 # MarinerWrite Document QAverage
+.mwp 00;37 # Lotus Word Pro SmartMaster File QAverage
+.nfo 00;37 # Warez Information File QAverage
+.notes 00;37 # Memento Notes File QAverage
+.now 00;37 # Readme File QAverage
+.nzb 00;37 # NewzBin File QAverage
+.odt 00;37 # OpenDocument Text Document QAverage
+.ofl 00;37 # Ots File List QAverage
+.opml 00;37 # OPML File Common
+.ott 00;37 # OpenDocument Text Document Template QAverage
+.p7s 00;37 # Digitally Signed Message QAverage
+.pages 00;37 # Pages Document AbsolutelyVeryCommon
+.pfx 00;37 # First Choice Word Processing Document QAverage
+.pjt 00;37 # FoxPro Project Memo QAverage
+.psw 00;37 # Pocket Word Document QAverage
+.pwi 00;37 # Pocket Word Document QAverage
+.qdl 00;37 # QDL Program QAverage
+.rad 00;37 # Radar ViewPoint Radar Data QAverage
+.readme 00;37 # Readme File QAverage
+.rt 00;37 # RealText Streaming Text File QAverage
+.rtd 00;37 # RagTime Document QAverage
+.rtf 00;37 # Rich Text Format File AbsolutelyVeryCommon
+.rtfd 00;37 # Rich Text Format Directory File QAverage
+.rtx 00;37 # Rich Text Document QAverage
+.run 00;37 # Runscanner Scan File QAverage
+.rzk 00;37 # File Crypt Password File QAverage
+.rzn 00;37 # Red Zion Notes File QAverage
+.safetext 00;37 # SafeText File QAverage
+.scc 00;37 # Scenarist Closed Caption File QAverage
+.scw 00;37 # Movie Magic Screenwriter Document QAverage
+.sdw 00;37 # StarOffice Writer Text Document QAverage
+.sgm 00;37 # SGML File QAverage
+.sig 00;37 # Signature File Common
+.sls 00;37 # Image Playlist QAverage
+.sms 00;37 # Exported SMS Text Message QAverage
+.ssa 00;37 # Sub Station Alpha Subtitle File QAverage
+.strings 00;37 # Text Strings File QAverage
+.sty 00;37 # LaTeX Style QAverage
+.sub 00;37 # Subtitle File QAverage
+.sxw 00;37 # StarOffice Writer Text Document QAverage
+.tab 00;37 # Guitar Tablature File QAverage
+.tdf 00;37 # Guide Text Definition File QAverage
+.text 00;37 # Plain Text File QAverage
+.thp 00;37 # TurboTax Text String QAverage
+.tlb 00;37 # VAX Text Library QAverage
+.tmx 00;37 # Translation Memory eXchange File QAverage
+.txt 00;37 # Plain Text File AbsolutelyVeryCommon
+.u3i 00;37 # U3 Application Information File QAverage
+.unauth 00;37 # SiteMinder Unauthorized Message File QAverage
+.unx 00;37 # Unix Text File QAverage
+.upd 00;37 # Program Update Information QAverage
+.utf8 00;37 # Unicode UTF8-Encoded Text QAverage
+.utxt 00;37 # Unicode Text File QAverage
+.vct 00;37 # Visual Class Library Memo QAverage
+.vnt 00;37 # Mobile Phone vNote File QAverage
+.wcf 00;37 # WebEx Saved Chat Session QAverage
+.wgz 00;37 # S60 Web Runtime Widget Package QAverage
+.wn 00;37 # WriteNow Text Document QAverage
+.wp4 00;37 # WordPerfect 4 Document QAverage
+.wp5 00;37 # WordPerfect 5 Document QAverage
+.wp6 00;37 # WordPerfect 6 Document QAverage
+.wp7 00;37 # WordPerfect 7 Document QAverage
+.wpa 00;37 # ACT! Word Processing Document QAverage
+.wpd 00;37 # WordPerfect Document AbsolutelyVeryCommon
+.wpl 00;37 # DEC WPS Plus Text Document QAverage
+.wps 00;37 # Microsoft Works Word Processor Document AbsolutelyVeryCommon
+.wpt 00;37 # WordPerfect Template QAverage
+.wsh 00;37 # Windows Script Host Settings QAverage
+.xdl 00;37 # XML Schema File QAverage
+.xlf 00;37 # XLIFF Document QAverage
+.xwp 00;37 # XMLwriter Project QAverage
+.xy 00;37 # XYWrite Document QAverage
+.xy3 00;37 # XYWrite III Document QAverage
+.xyp 00;37 # XYWrite Plus Document QAverage
+.xyw 00;37 # XYWrite for Windows Document QAverage
+.ybk 00;37 # YanCEyWare Reader eBook QAverage
+.yml 00;37 # YAML Document QAverage
+
+# WEB
+.adr 01;33 # Opera Bookmarks File QAverage
+.ap 01;33 # Active Page QAverage
+.aro 01;33 # SteelArrow Web Application File QAverage
+.asa 01;33 # ASP Configuration File QAverage
+.ascx 01;33 # Active Server Custom Control QAverage
+.ashx 01;33 # ASP.NET Web Handler File QAverage
+.asmx 01;33 # Active Server Method File Common
+.asp 01;33 # Active Server Page AbsolutelyVeryCommon
+.aspx 01;33 # Active Server Page Extended QAverage
+.asr 01;33 # ActionScript Remote Document QAverage
+.atom 01;33 # Atom Syndication Format QAverage
+.bml 01;33 # Bean Markup Language File QAverage
+.cer 01;33 # Internet Security Certificate QAverage
+.cfm 01;33 # ColdFusion Markup File QAverage
+.cha 01;33 # Online Chat Configuration File QAverage
+.chat 01;33 # Online Chat Configuration File QAverage
+.chm 01;33 # Compiled HTML Help File QAverage
+.cms 01;33 # Content Management System QAverage
+.con 01;33 # Concept Application Source File QAverage
+.crt 01;33 # Security Certificate Common
+.csp 01;33 # Concept Server Page QAverage
+.css 01;33 # Cascading Style Sheet AbsolutelyVeryCommon
+.dap 01;33 # Access Data Access Page QAverage
+.dbm 01;33 # ColdFusion Server File QAverage
+.dhtml 01;33 # Dynamic HTML file QAverage
+.disco 01;33 # DISCO Discovery Document QAverage
+.discomap 01;33 # DISCO Discovery Output File QAverage
+.do 01;33 # Java Servlet QAverage
+.download 01;33 # Partially Downloaded File QAverage
+.dwt 01;33 # Dreamweaver Web Page Template QAverage
+.epibrw 01;33 # Web File Location QAverage
+.esproj 01;33 # Espresso Project File QAverage
+.gne 01;33 # Flickr Web Page QAverage
+.htaccess 01;33 # Apache HTACCESS File QAverage
+.htm 01;33 # Hypertext Markup Language File AbsolutelyVeryCommon
+.html 01;33 # Hypertext Markup Language File AbsolutelyVeryCommon
+.htx 01;33 # HTML Extension File QAverage
+.hxs 01;33 # Help 2 Compiled Help File QAverage
+.idc 01;33 # Internet Database Connector File QAverage
+.iqy 01;33 # Internet Query QAverage
+.jhtml 01;33 # Java HTML Web Page QAverage
+.jnlp 01;33 # Java Web Start File QAverage
+.js 01;33 # JavaScript File AbsolutelyVeryCommon
+.jsp 01;33 # Java Server Page AbsolutelyVeryCommon
+.jspx 01;33 # XML Java Server Page Common
+.jvs 01;33 # JavaScript Proxy Autoconfig File QAverage
+.jws 01;33 # Java Web Services File QAverage
+.lasso 01;33 # Lasso Database-Driven Web Page QAverage
+.lbc 01;33 # Cloaked Affiliate Link Builder Saved Link QAverage
+.mht 01;33 # MHTML Web Archive QAverage
+.mhtml 01;33 # MIME HTML File QAverage
+.moz 01;33 # Mozilla Cache File QAverage
+.md 01;33 # Markdown file
+.mspx 01;33 # Microsoft ASP.NET Web Page QAverage
+.ognc 01;33 # Dynamic Web Page QAverage
+.oth 01;33 # OpenDocument HTML Template QAverage
+.p12 01;33 # Personal Information Exchange QAverage
+.pem 01;33 # Privacy Enhanced Mail Certificate QAverage
+.qf 01;33 # Qompose Web Page Template QAverage
+.qrm 01;33 # Qworum Message File QAverage
+.rhtml 01;33 # Ruby HTML Web Page QAverage
+.rjs 01;33 # Ruby Javascript File QAverage
+.rst 01;33 # reStructuredText File QAverage
+.rss 01;33 # Rich Site Summary AbsolutelyVeryCommon
+.rwp 01;33 # RapidWeaver Package QAverage
+.rwsw 01;33 # RapidWeaver Site File QAverage
+.saveddeck 01;33 # Nokia Saved Web Page QAverage
+.shtm 01;33 # HTML Server Side Include File QAverage
+.shtml 01;33 # Server Side Include HTML File QAverage
+.site 01;33 # GoLive Website Project File QAverage
+.svr 01;33 # Compressed Virtual World QAverage
+.ucf 01;33 # WebEx Media File Common
+.url 01;33 # Internet Shortcut QAverage
+.vbd 01;33 # Visual Basic ActiveX Document QAverage
+.vrml 01;33 # VRML File QAverage
+.vsdisco 01;33 # DISCO Dynamic Discovery Document QAverage
+.wdgt 01;33 # Opera Widget QAverage
+.webarchive 01;33 # Safari Web Archive Common
+.webloc 01;33 # Mac OS X Website Location QAverage
+.wgt 01;33 # Opera Widget File Common
+.whtt 01;33 # HTTrack Website Copier File QAverage
+.wml 01;33 # Wireless Markup Language File Common
+.woa 01;33 # WebObjects Application QAverage
+.wpp 01;33 # Serif WebPlus Project QAverage
+.wrf 01;33 # WebEx Recording QAverage
+.wsdl 01;33 # Web Services Description Language File QAverage
+.xht 01;33 # XHTML File QAverage
+.xhtml 01;33 # Extensible Hypertext Markup Language File AbsolutelyVeryCommon
+.xpd 01;33 # XML Pipeline Document QAverage
+.xul 01;33 # XML User Interface Language File QAverage
+.zfo 01;33 # XSL-FO Online Form QAverage
+.zhtml 01;33 # Secure IE Zipped HTML File QAverage
+.zvz 01;33 # Possible Virus File QAverage
+.4db 01;37 # 4th Dimension Database Structure File QAverage
+.4dd 01;37 # 4th Dimension Database Data File QAverage
+
+# DEVELOPMENT
+.php 01;37 # Hypertext Preprocessor File AbsolutelyVeryCommon
+.a 01;37 # Static Library QAverage
+.a2w 01;37 # Alice World QAverage
+.adb 01;37 # Ada Body File QAverage
+.ads 01;37 # Ada Specification File QAverage
+.agi 01;37 # Asterisk Gateway Interface File QAverage
+.alb 01;37 # Alpha Five Library QAverage
+.am4 01;37 # AutoPlay Media Studio 4 Project File QAverage
+.am5 01;37 # AutoPlay Media Studio 5 Project File QAverage
+.am6 01;37 # AutoPlay Media Studio 6 Project QAverage
+.am7 01;37 # AutoPlay Media Studio 7 Project QAverage
+.apa 01;37 # RSView Development Project Archive QAverage
+.artproj 01;37 # Artifacts Project QAverage
+.as 01;37 # ActionScript File QAverage
+.asi 01;37 # Alpha Five Variable File QAverage
+.au3 01;37 # AutoIt v3 Script QAverage
+.b 01;37 # BASIC Source File QAverage
+.bas 01;37 # BASIC Source Code File QAverage
+.bb 01;37 # Blitz Source Code File QAverage
+.bbc 01;37 # BBC BASIC Data File QAverage
+.bet 01;37 # BETA Source File QAverage
+.bpg 01;37 # Borland Project Group QAverage
+.bpl 01;37 # Borland Package Library QAverage
+.bs2 01;37 # BASIC Stamp 2 Code File QAverage
+.c 01;37 # C/C++ Source Code File AbsolutelyVeryCommon
+.cbl 01;37 # COBOL Program QAverage
+.cc 01;37 # C++ Source Code File QAverage
+.ccn 01;37 # Compressed Multimedia Fusion File QAverage
+.cd 01;37 # Visual Studio Class Diagram QAverage
+.class 01;37 # Java Class File Common
+.cls 01;37 # Program Class File QAverage
+.cob 01;37 # COBOL Source Code File QAverage
+.cod 01;37 # Compiled Source Code QAverage
+.config 01;37 # Configuration File QAverage
+.cp 01;37 # Xcode C++ Source File Common
+.cpp 01;37 # C++ Source Code File AbsolutelyVeryCommon
+.cs 01;37 # C Sharp Source Code File Common
+.csi 01;37 # ContentServ Include File QAverage
+.csproj 01;37 # Visual Studio C# Project Common
+.cst 01;37 # ContentServ Template QAverage
+.ctl 01;37 # Visual Basic UserControl Object File QAverage
+.ctx 01;37 # Visual Basic Control Binary File QAverage
+.d 01;37 # D Source Code File QAverage
+.dbo 01;37 # DarkBASIC Object QAverage
+.dcp 01;37 # Delphi Compiled Package QAverage
+.dcu 01;37 # Delphi Compiled Unit QAverage
+.dec 01;37 # Declaration File QAverage
+.def 01;37 # Module-Definition File QAverage
+.dev 01;37 # Dev-C++ Project File QAverage
+.df1 01;37 # Omnis Native Datafile QAverage
+.dob 01;37 # Visual Basic UserDocument QAverage
+.dox 01;37 # Visual Basic Binary UserDocument QAverage
+.dpk 01;37 # Delphi Package QAverage
+.dpl 01;37 # Delphi Package Library QAverage
+.dtd 01;37 # Document Type Definition QAverage
+.ent 01;37 # External Entity QAverage
+.eql 01;37 # Embedded SQL File QAverage
+.ex 01;37 # Euphoria Source Code QAverage
+.f 01;37 # Fortran
+.f90 01;37 # Fortran 90 Source File QAverage
+.fbp 01;37 # wxFormBuilder Project QAverage
+.fgl 01;37 # Fifth Generation Language Source File QAverage
+.fic 01;37 # WINDEV Hyper File Database QAverage
+.fla 01;37 # Adobe Flash Animation QAverage
+.for 01;37 # Fortran 77 Source File QAverage
+.fpa 01;37 # Front Panel Encrypted Order File QAverage
+.fpd 01;37 # Front Panel Order File QAverage
+.fpm 01;37 # FPS Creator Map File QAverage
+.fpp 01;37 # Front Panel Project QAverage
+.framework 01;37 # Mac OS X Application Framework QAverage
+.fsproj 01;37 # FireStarter Project File QAverage
+.gem 01;37 # RubyGems Package Common
+.global 01;37 # Global Makefile Common
+.gls 01;37 # GLScript Game Script QAverage
+.gm6 01;37 # Game Maker 6 Project File QAverage
+.gmd 01;37 # Game Maker Program Code QAverage
+.gmk 01;37 # Game Maker 7 File QAverage
+.gmo 01;37 # GNU Machine Object File QAverage
+.gorm 01;37 # Gorm Interface Resource File QAverage
+.gs3 01;37 # GameStarter File QAverage
+.h 01;37 # C++ or Java Header File Common
+.has 01;37 # Haskell Script QAverage
+.hh 01;37 # C++ Header File QAverage
+.hpf 01;37 # High Performance Fortran File QAverage
+.hpp 01;37 # C++Builder Header File QAverage
+.i 01;37 # INTERCAL Source File QAverage
+.idb 01;37 # Visual Studio Intermediate Debug File QAverage
+.iml 01;37 # IntelliJ IDEA Module QAverage
+.inc 01;37 # Include File QAverage
+.isc 01;37 # Xilinx Device Configuration File QAverage
+.iss 01;37 # InstallShield Silent Response QAverage
+.iws 01;37 # IntelliJ IDEA Web Page QAverage
+.jav 01;37 # Java Source File QAverage
+.java 01;37 # Java Source Code File AbsolutelyVeryCommon
+.jed 01;37 # Xilinx JEDEC Programming File QAverage
+.jpr 01;37 # JBuilder Project QAverage
+.json 01;37 # JavaScript Object Notation File QAverage
+.kb 01;37 # C++ Keyboard Script QAverage
+.kdevelop 01;37 # KDevelop Project Data File QAverage
+.kdevprj 01;37 # KDevelop Project File QAverage
+.lbi 01;37 # Dreamweaver Library Item QAverage
+.lbs 01;37 # Omnis Library QAverage
+.lds 01;37 # Linux Compile Time Header File QAverage
+.lgo 01;37 # Logo Instructions File QAverage
+.lhs 01;37 # Literate Haskell Script QAverage
+.licenses 01;37 # Visual Studio Licensed Classes File QAverage
+.licx 01;37 # Visual Studio License File QAverage
+.lproj 01;37 # Localized Project Folder QAverage
+.lua 01;37 # Lua Source File QAverage
+.m 01;37 # Mathematica Input File Common
+.m4 01;37 # Macro Processor Library QAverage
+.magik 01;37 # Magik Source Code File QAverage
+.mak 01;37 # Makefile QAverage
+.mer 01;37 # RSView Development Runtime File QAverage
+.mf 01;37 # Java Manifest File QAverage
+.mfa 01;37 # Multimedia Fusion Development File QAverage
+.mk 01;37 # Makefile QAverage
+.mo 01;37 # Machine Object File QAverage
+.mom 01;37 # Managed Object Model QAverage
+.mpr 01;37 # FoxPro Generated Menu Program QAverage
+.mxml 01;37 # Flex MXML Component QAverage
+.myapp 01;37 # Visual Studio Application XML File QAverage
+.nib 01;37 # Interface Resources QAverage
+.nxc 01;37 # NXC Source Code File QAverage
+.o 01;37 # Compiled Object File QAverage
+.oca 01;37 # Custom Control Library Type File QAverage
+.ocx 01;37 # ActiveX Control QAverage
+.omo 01;37 # OMake Object File QAverage
+.owl 01;37 # OWL Source Code File QAverage
+.p 01;37 # Pascal Source Code QAverage
+.pas 01;37 # Pascal Source File Common
+.pb 01;37 # PureBasic Source File QAverage
+.pbproj 01;37 # Project Builder Project QAverage
+.pch 01;37 # Precompiled Header File Common
+.ph 01;37 # Perl Header File QAverage
+.pl 01;37 # Perl Script AbsolutelyVeryCommon
+.plc 01;37 # PL/B Source File QAverage
+.ple 01;37 # Messenger Plus! Live Encrypted Log File QAverage
+.pli 01;37 # PL/I Source Code File QAverage
+.po 01;37 # Portable Object QAverage
+.ptl 01;37 # Rational Rose Petal File QAverage
+.py 01;37 # Python Script Common
+.py3 01;37 # Python Script Common
+.pyd 01;37 # Python Dynamic Module QAverage
+.pyw 01;37 # Python GUI Source File QAverage
+.qpr 01;37 # FoxPro Generated Query Program QAverage
+.qx 01;37 # Quexal Source Code QAverage
+.rb 01;37 # REALbasic Project QAverage
+.rbc 01;37 # Rembo-C Script QAverage
+.rbp 01;37 # REALbasic Project QAverage
+.rc 01;37 # Resource Script QAverage
+.res 01;37 # Windows Resource File QAverage
+.rsrc 01;37 # Macintosh Resource File QAverage
+.ru 01;37 # JavaSoft JRE 1.3 Library QAverage
+.rul 01;37 # InstallShield Rules QAverage
+.s 01;37 # Source Code File QAverage
+.s19 01;37 # Motorola S19 File Record QAverage
+.sas 01;37 # SAS Program File QAverage
+.sc 01;37 # SuperCollider Source Code File QAverage
+.sln 01;37 # Visual Studio Solution File QAverage
+.sma 01;37 # AMX Mod Plugin Source File QAverage
+.snippet 01;37 # Visual Studio IntelliSense Code Snippet QAverage
+.so 01;37 # Shared Library QAverage
+.src 01;37 # Source Code Common
+.ssc 01;37 # SourceSafe Status File QAverage
+.sud 01;37 # Super Project Analyzer File QAverage
+.suo 01;37 # Visual Studio Solution User Options File QAverage
+.swc 01;37 # Flex Components Archive QAverage
+.swd 01;37 # Flash Debug File QAverage
+.t 01;37 # Turing Source Code File QAverage
+.targets 01;37 # MSBuild Targets File QAverage
+.tcl 01;37 # Tcl Script QAverage
+.tds 01;37 # Turbo Debugger Symbols File QAverage
+.tex 01;37 # TeX code file Common
+.tk 01;37 # Tk Script QAverage
+.tpu 01;37 # Turbo Pascal Unit QAverage
+.tpx 01;37 # Turbo Pascal 7 Unit QAverage
+.tu 01;37 # Turing Source File QAverage
+.tur 01;37 # Turing Program Source File QAverage
+.ui 01;37 # User Interface File QAverage
+.vac 01;37 # Oc2.316s Cakit File QAverage
+.vbg 01;37 # Visual Basic Project Group File QAverage
+.vbp 01;37 # Visual Basic Project File QAverage
+.vbproj 01;37 # Visual Studio Visual Basic Project Common
+.vbx 01;37 # Visual Basic Custom Control QAverage
+.vbz 01;37 # Visual Basic Project Template QAverage
+.vc 01;37 # Verge Code File QAverage
+.vc4 01;37 # Visual C++ 4 File QAverage
+.vcproj 01;37 # Visual C++ Project File QAverage
+.vcx 01;37 # Visual Fox Pro Class Library QAverage
+.vdm 01;37 # VDM Specification File QAverage
+.vdproj 01;37 # Visual Studio Deployment Project File QAverage
+.vgc 01;37 # ViziGen Code Generation Template QAverage
+.vhd 01;37 # VHDL Source File QAverage
+.vspscc 01;37 # Visual Studio Project Source Control File QAverage
+.vssscc 01;37 # Visual Studio Solution Source Control File QAverage
+.wdl 01;37 # World Definition Language Script QAverage
+.wsc 01;37 # Windows Script Component QAverage
+.x 01;37 # Lex Source Code File QAverage
+.xaml 01;37 # XAML File QAverage
+.xcode 01;37 # Xcode Project QAverage
+.xcodeproj 01;37 # Xcode Project QAverage
+.xib 01;37 # Interface Builder File QAverage
+.xsd 01;37 # XML Schema Definition QAverage
+.yab 01;37 # Yabasic Source Code QAverage
+.ymp 01;37 # YaST Metapackage File QAverage
+
+# EXECUTABLE
+.a6p 04;91 # Authorware 6 Program QAverage
+.ac 04;91 # Autoconf Script QAverage
+.action 04;91 # Automator Action QAverage
+.ahk 04;91 # AutoHotkey Script Common
+.air 04;91 # Adobe AIR Installation Package QAverage
+.apk 04;91 # Android Package File QAverage
+.app 04;91 # Mac OS X Application AbsolutelyVeryCommon
+.applescript 04;91 # AppleScript File QAverage
+.awk 04;91 # AWK Script QAverage
+.bat 04;91 # DOS Batch File AbsolutelyVeryCommon
+.cgi 04;91 # Common Gateway Interface Script AbsolutelyVeryCommon
+.cmd 04;91 # Windows Command File QAverage
+.com 04;91 # DOS Command File AbsolutelyVeryCommon
+.dek 04;91 # Eavesdropper Batch File QAverage
+.dld 04;91 # EdLog Compiled Program QAverage
+.ds 04;91 # TWAIN Data Source QAverage
+.ebm 04;91 # EXTRA! Basic Macro QAverage
+.ecf 04;91 # SageCRM Component File QAverage
+.elf 04;91 # Playstation Executable File QAverage
+.es 04;91 # SageCRM Script File QAverage
+.esh 04;91 # Extended Shell Batch File QAverage
+.exe 04;91 # Windows Executable File AbsolutelyVeryCommon
+.ezs 04;91 # EZ-R Stats Batch Script QAverage
+.fas 04;91 # Compiled Fast-Load AutoLISP File QAverage
+.fky 04;91 # FoxPro Macro QAverage
+.fpi 04;91 # FPS Creator Intelligence Script QAverage
+.frs 04;91 # Flash Renamer Script QAverage
+.fxp 04;91 # FoxPro Compiled Source QAverage
+.gadget 04;91 # Windows Gadget Common
+.gpe 04;91 # GP2X Video Game QAverage
+.gpu 04;91 # GP2X Utility Program QAverage
+.hms 04;91 # HostMonitor Script File QAverage
+.hta 04;91 # HTML Application QAverage
+.icd 04;91 # SafeDisc Encrypted Program QAverage
+.iim 04;91 # iMacro Macro File QAverage
+.ipa 04;91 # iPhone or iPod Touch Application QAverage
+.isu 04;91 # InstallShield Uninstaller Script QAverage
+.jar 04;91 # Java Archive File Common
+.jse 04;91 # JScript Encoded File QAverage
+.jsx 04;91 # ExtendScript Script File QAverage
+.kix 04;91 # KiXtart Script File QAverage
+.mcr 04;91 # 3ds Max Macroscript File QAverage
+.mel 04;91 # Maya Embedded Language File QAverage
+.mem 04;91 # Macro Editor Macro QAverage
+.mrc 04;91 # mIRC Script File QAverage
+.ms 04;91 # 3ds Max Script File QAverage
+.mst 04;91 # Windows SDK Setup Transform Script QAverage
+.mxe 04;91 # Macro Express Playable Macro QAverage
+.obs 04;91 # ObjectScript Script File QAverage
+.paf 04;91 # Portable Application Installer File QAverage
+.pif 04;91 # Program Information File AbsolutelyVeryCommon
+.plsc 04;91 # Messenger Plus! Live Script File QAverage
+.plx 04;91 # Perl Executable File QAverage
+.prg 04;91 # Program File Common
+.pwc 04;91 # PictureTaker File QAverage
+.qpx 04;91 # FoxPro Compiled Query Program QAverage
+.rgs 04;91 # Registry Script QAverage
+.rox 04;91 # Actuate Report Object Executable File QAverage
+.rxe 04;91 # Lego Mindstorms NXT Executable Program QAverage
+.scar 04;91 # SCAR Script QAverage
+.scb 04;91 # Scala Published Script QAverage
+.scpt 04;91 # AppleScript Script File QAverage
+.scr 04;91 # Script File Common
+.script 04;91 # Generic Script File QAverage
+.seed 04;91 # Linux Preseed File QAverage
+.shs 04;91 # Shell Scrap Object File QAverage
+.spr 04;91 # FoxPro Generated Screen File QAverage
+.u3p 04;91 # U3 Smart Application QAverage
+.udf 04;91 # Excel User Defined Function QAverage
+.vb 04;91 # VBScript File AbsolutelyVeryCommon
+.vbe 04;91 # VBScript Encoded Script File QAverage
+.vbs 04;91 # VBScript File Common
+.vbscript 04;91 # Visual Basic Script QAverage
+.vlx 04;91 # Compiled AutoLISP File QAverage
+.wcm 04;91 # WordPerfect Macro QAverage
+.widget 04;91 # Yahoo! Widget QAverage
+.wiz 04;91 # Microsoft Wizard File Common
+.workflow 04;91 # Automator Workflow QAverage
+.ws 04;91 # Windows Script AbsolutelyVeryCommon
+.wsf 04;91 # Windows Script File Common
+.xap 04;91 # Silverlight Application Package Common
+.xqt 04;91 # SuperCalc Macro File QAverage
+.xys 04;91 # XYplorer Script File QAverage
+
+# BACKUP
+.wbk 00;90 # Word Document Backup QAverage
+.$$$ 00;90 # Temporary File QAverage
+.$db 00;90 # dBASE Temporary File QAverage
+.001 00;90 # Norton Ghost Disk Backup Common
+.113 00;90 # Iomega Backup File QAverage
+.abbu 00;90 # Address Book Backup QAverage
+.abk 00;90 # Automatic Backup QAverage
+.bac 00;90 # Backup File QAverage
+.backup 00;90 # Backup File QAverage
+.backupdb 00;90 # Time Machine Backup Folder QAverage
+.bak 00;90 # Backup File AbsolutelyVeryCommon
+.bck 00;90 # VMX Backup File QAverage
+.bckp 00;90 # Ad-Aware Quarantined File QAverage
+.bdb 00;90 # Microsoft Works Database Backup File QAverage
+.bkc 00;90 # Backup4all Backup Catalog QAverage
+.bkf 00;90 # Windows Backup Utility File QAverage
+.bkp 00;90 # Backup File Common
+.bks 00;90 # Microsoft Works Spreadsheet Backup File QAverage
+.bpa 00;90 # StorageSync Backup Archive QAverage
+.bpm 00;90 # PowerDesigner Business Process Model QAverage
+.bps 00;90 # Microsoft Works Document Backup QAverage
+.bup 00;90 # Backup File AbsolutelyVeryCommon
+.dbk 00;90 # dBASE Database Backup QAverage
+.fbc 00;90 # Family Tree Maker for DOS Backup File QAverage
+.fbf 00;90 # Free Backup Fix Backup File QAverage
+.fbk 00;90 # Microsoft Dynamics NAV Backup File QAverage
+.fbu 00;90 # FEBE Firefox Backup File QAverage
+.ful 00;90 # Microsoft Backup File List QAverage
+.gb1 00;90 # Game Maker Backup File QAverage
+.gho 00;90 # Norton Ghost Backup File AbsolutelyVeryCommon
+.ghs 00;90 # Norton Ghost Image Segment QAverage
+.ipd 00;90 # BlackBerry Backup File QAverage
+.iv2i 00;90 # Norton Ghost Incremental Virtual Volume Image QAverage
+.jbk 00;90 # Juno Backup File QAverage
+.llx 00;90 # LabVIEW VI Library Backup File QAverage
+.nb7 00;90 # NovaBACKUP Output File QAverage
+.nbf 00;90 # Backup Now Archive QAverage
+.nbk 00;90 # NovaBACKUP Backup Script QAverage
+.nbu 00;90 # Nokia Phone Backup File QAverage
+.nco 00;90 # Nero BackItUp File QAverage
+.nrs 00;90 # NovaBACKUP Restore Script QAverage
+.oeb 00;90 # Outlook Express Backup Wizard File QAverage
+.old 00;90 # Backup File Common
+.onepkg 00;90 # Microsoft OneNote Package File QAverage
+.ori 00;90 # Original File AbsolutelyVeryCommon
+.oyx 00;90 # Approach Alternate Database Index QAverage
+.paq 00;90 # Hewlett-Packard Software Restore File QAverage
+.qbb 00;90 # QuickBooks Backup File QAverage
+.qbx 00;90 # QuickBooks Accountant Transfer File QAverage
+.qic 00;90 # Windows Backup File QAverage
+.qsf 00;90 # Qualtrics Survey File QAverage
+.rbf 00;90 # Retrospect Backup File QAverage
+.rbk 00;90 # Windows 95 Registry Backup File QAverage
+.rrr 00;90 # Registry Mechanic Backup File QAverage
+.skb 00;90 # SketchUp Backup Document QAverage
+.sn1 00;90 # Drive Snapshot First Differential Backup QAverage
+.sn2 00;90 # Drive Snapshot Second Differential Backup QAverage
+.sna 00;90 # Drive Snapshot Primary Backup File QAverage
+.spg 00;90 # TCP Optimizer Backup File QAverage
+.sqb 00;90 # SQL Backup SQL Server Backup File QAverage
+.tmp 00;90 # Temporary File AbsolutelyVeryCommon
+.uci 00;90 # UFS Explorer Backup File QAverage
+.v2i 00;90 # Norton Ghost Virtual Volume Image QAverage
+.win 00;90 # Windows Backup File QAverage
+.wjf 00;90 # WinZip Job File QAverage
+.xlk 00;90 # Excel Backup File QAverage
+
+.pyc 00;90 # Python Compiled File QAverage
+.pyo 00;90 # Python Optimized Code QAverage

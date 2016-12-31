@@ -1,0 +1,10 @@
+# Search all parent directories for file in the first argument
+slashes=${PWD//[^\/]/}
+directory="$PWD"
+
+for (( n=${#slashes}; n>0; --n ));  do
+    test -e "$directory/$1" && realpath "$directory/" && exit 0
+    directory="$directory/.."
+done
+
+exit -1

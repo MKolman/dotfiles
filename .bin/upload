@@ -1,0 +1,36 @@
+# Upload the given files/folders
+# Find the first parent .remote
+remote_folder=$(upsearch .remote)
+if [[ ! $remote_folder ]]; then
+    echo "Error: No '.remote' file found in parent directories. Aborting..."
+    exit -1
+fi
+
+remote_file="$remote_folder/.remote"
+
+if [[ ! $1 ]]; then
+    echo "Error: Upload expects at least one argument"
+    exit -2
+fi
+
+if [ ! -e $1 ]; then
+    echo "Error: File or directory '$1' does not exist"
+    exit -3
+fi
+remote=$(cat $remote_file)
+rel_path=$(realpath --relative-to="$remote_folder" $1)
+remote="$remote$rel_path"
+echo $remote_folder $rel_path $1 $remote
+du -sh $1
+
+REPLY=""
+while [[ ! $REPLY =~ ^[YyNn]$ ]]
+do
+    read -p "Would you like to upload these to $remote? (Y/n) " -r -n 1
+    REPLY=${REPLY:-Y}
+    echo
+done
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    rsync -r $1 $remote
+fi

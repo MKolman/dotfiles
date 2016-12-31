@@ -1,0 +1,8 @@
+# Takes one C++ source file as input it compiles it and runs it
+echo "Building $1..."
+g++ $1 -o o${1%.*} --std=c++14 -Wall -O2 -Wextra -pedantic
+
+if [ -f o${1%.*} ]; then
+  echo "Running o${1%.*}..."
+ ./o${1%.*}
+fi
