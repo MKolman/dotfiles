@@ -1,0 +1,6 @@
+cp ~/.bash_profile .
+cp ~/.bash_aliases .
+cp ~/.bashrc .
+cp ~/.dircolors .
+cp ~/.ssh/config .ssh/
+cp ~/.bin . -r
