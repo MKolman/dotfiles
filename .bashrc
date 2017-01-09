@@ -60,8 +60,17 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w"
-    PS1="$PS1\`if [[ \$? = 0 ]]; then echo '\\[\\033[00m\\]'; else echo '\\[\\033[31m\\]'; fi\`\$\[\033[00m\] "
+    # prompt either red or green if the last command was succesful
+    PS1="\`if [[ \$? = 0 ]]; then echo '\\[\\033[01;32m\\]'; else echo '\\[\\033[31m\\]'; fi\`"
+    # Normal prompt
+    PS1="$PS1\u@\h\[\033[00m\]:\[\033[0;34m\]\w"
+    # If not master show git branch
+    BRANCH="git rev-parse --abbrev-ref HEAD"
+    PS1="$PS1\e[33m\`if [[ \$($BRANCH 2> /dev/null) ]] &&"
+    PS1="$PS1 [[ \$($BRANCH 2> /dev/null) != 'master' ]];"
+    PS1="$PS1 then echo \" [\$($BRANCH)]\"; fi\`"
+    # Last $
+    PS1="$PS1\[\033[00m\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
