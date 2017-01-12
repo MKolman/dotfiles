@@ -59,27 +59,52 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+prompt_command() {
+  RET=$?
+  RED="\[\033[31m\]"
+  GREEN="\[\033[01;32m\]"
+  WHITE="\[\033[00m\]"
+  BLUE="\[\033[0;34m\]"
+  YELLOW="\[\033[0;33m\]"
+  if [[ $RET == 0 ]]; then
+    PS1=$GREEN
+  else
+    PS1=$RED
+  fi
+  # Normal prompt
+  PS1="$PS1\u@\h${WHITE}:${BLUE}\w"
+  # If not master show git branch
+  BRANCH=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  if [[ $BRANCH ]] && [[ $BRANCH != 'master' ]]; then
+    PS1="$PS1 ${YELLOW}[${BRANCH}]"
+  fi
+  # Last $
+
+  if [[ $RET == 0 ]]; then
+    PS1="$PS1$WHITE\$ "
+  else
+    PS1="$PS1$RED\$$WHITE "
+  fi
+
+  case "$TERM" in xterm*|rxvt*)
+      PS1="$PS1\[\e]0;\u@\h: \`PWD\`\a\]"
+  esac
+}
+
+PROMPT_COMMAND="prompt_command"
+
 if [ "$color_prompt" = yes ]; then
-    # prompt either red or green if the last command was succesful
-    PS1="\`if [[ \$? = 0 ]]; then echo '\\[\\033[01;32m\\]'; else echo '\\[\\033[31m\\]'; fi\`"
     # Normal prompt
-    PS1="$PS1\u@\h\[\033[00m\]:\[\033[0;34m\]\w"
-    # If not master show git branch
-    BRANCH="git rev-parse --abbrev-ref HEAD"
-    PS1="$PS1\e[33m\`if [[ \$($BRANCH 2> /dev/null) ]] &&"
-    PS1="$PS1 [[ \$($BRANCH 2> /dev/null) != 'master' ]];"
-    PS1="$PS1 then echo \" [\$($BRANCH)]\"; fi\`"
-    # Last $
-    PS1="$PS1\[\033[00m\]\$ "
+    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0;34m\]\w\[\033[00m\]\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="\u@\h:\w\$ "
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in xterm*|rxvt*)
     function PWD {
-      pwd | awk -F\/ '{print $(NF-1),$(NF)}'
+      pwd | awk -F\/ '{print $(NF-1)"/"$(NF)}'
     }
     PS1="$PS1\[\e]0;\u@\h: \`PWD\`\a\]"
     ;;
