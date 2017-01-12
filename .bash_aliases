@@ -31,7 +31,7 @@ alias aur='yaourt'
 alias extract='dtrx'
 
 # GUI open
-# alias go='xdg-open'
+alias go='xdg-open'
 
 # Python virtualenv named venv
 alias venv='. venv/bin/activate'
