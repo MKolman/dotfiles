@@ -66,10 +66,19 @@ prompt_command() {
   WHITE="\[\033[00m\]"
   BLUE="\[\033[0;34m\]"
   YELLOW="\[\033[0;33m\]"
+
+  PS1=""
+  # Display virtualenv
+  if [[ $VIRTUAL_ENV != "" ]]
+      then
+        # Strip out the path and just leave the env name
+        PS1="$WHITE(${VIRTUAL_ENV##*/})"
+  fi
+
   if [[ $RET == 0 ]]; then
-    PS1=$GREEN
+    PS1=$PS1$GREEN
   else
-    PS1=$RED
+    PS1=$PS1$RED
   fi
   # Normal prompt
   PS1="$PS1\u@\h${WHITE}:${BLUE}\w"
