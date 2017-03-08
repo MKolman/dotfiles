@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+MINIMAL_PROMPT=0
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -92,15 +94,16 @@ prompt_command() {
   if [[ $RET == 0 ]]; then
     PS1="$PS1$WHITE\$ "
   else
-    PS1="$PS1$RED\$$WHITE "
+    PS1="$PS1$RED $RET\$$WHITE "
   fi
 
   case "$TERM" in xterm*|rxvt*)
       PS1="$PS1\[\e]0;\u@\h: \`PWD\`\a\]"
   esac
 }
-
-PROMPT_COMMAND="prompt_command"
+if [[ "$MINIMAL_PROMPT" == 0 ]]; then
+  PROMPT_COMMAND="prompt_command"
+fi
 
 if [ "$color_prompt" = yes ]; then
     # Normal prompt
@@ -110,6 +113,9 @@ else
 fi
 unset color_prompt force_color_prompt
 
+if [[ "$MINIMAL_PROMPT" != 0 ]]; then
+  PS1="\[\033[01;32m\]\`PWD\`\[\033[00m\]$ "  # For shorter prompt
+fi
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in xterm*|rxvt*)
     function PWD {

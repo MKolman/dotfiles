@@ -42,5 +42,5 @@ alias ff='find . -iname'
 # Count lines
 alias count_lines='grep -cve "^\s*$"'
 
-alias g+="gc"
+alias g+="crun"
 alias g++="g++ -Wall -Wextra -pedantic --std=c++14"
