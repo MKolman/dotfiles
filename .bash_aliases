@@ -42,5 +42,10 @@ alias ff='find . -iname'
 # Count lines
 alias count_lines='grep -cve "^\s*$"'
 
+# run c++ programs
 alias g+="crun"
 alias g++="g++ -Wall -Wextra -pedantic --std=c++14"
+
+# Use installed time command not bash's command
+alias time="time"
+alias timer="/usr/bin/time -f '%e %U %S'"

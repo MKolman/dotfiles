@@ -150,12 +150,27 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Add custom commands into python path
+if [ -d ~/Dropbox/Faks/VRM/plotter ]; then
+  export PYTHONPATH=$PYTHONPATH:~/Dropbox/Faks/VRM/plotter
+fi
 # Add custom commands into path
 if [ -d ~/.bin ]; then
   export PATH=$PATH:~/.bin
+fi
+
+# Add AWS commands into path
+if [ -d ~/.local/bin ]; then
+  export PATH=$PATH:~/.local/bin
+fi
+
+# Add intel commands into path
+if [ -d /opt/intel/bin ]; then
+  export PATH=$PATH:/opt/intel/bin
 fi
 
 # Print out logo (if any)
 if [ -f ~/.bin/logo ]; then
   bash ~/.bin/logo
 fi
+
