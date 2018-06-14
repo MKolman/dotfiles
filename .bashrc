@@ -174,3 +174,5 @@ if [ -f ~/.bin/logo ]; then
   bash ~/.bin/logo
 fi
 
+# Default editor
+export VISUAL="nano"

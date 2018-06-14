@@ -1,89 +1,96 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory autocd notify
-bindkey -v
-# Delete key
-bindkey "\e[3~" delete-char
-# History binding keys
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
-bindkey '^R' history-incremental-search-backward
-# Home and end keys
-bindkey "\e[7~" beginning-of-line
-bindkey "\e[4~" end-of-line
-# Jump words with ctrl+arrow key
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Add Ruby gem bin to path
+export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
 
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/maks/.zshrc'
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/maks/.oh-my-zsh
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="kolman"
 
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in xterm*|rxvt*)
-    function PWDS {
-      pwd | awk -F\/ '{print $(NF-1)"/"$(NF)}'
-    }
-    PS1="$PS1\[\e]0;\u@\h: \`PWDS\`\a\]"
-    ;;
-*)
-    ;;
-esac
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-precmd() {
-  RET=$?
-  RED="%b%F{red}"
-  GREEN="%B%F{green}"
-  WHITE="%b%F{white}"
-  BLUE="%b%F{blue}"
-  YELLOW="%b%F{yellow}"
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-  PS1=""
-  # Display virtualenv
-  if [[ $VIRTUAL_ENV != "" ]]
-      then
-        # Strip out the path and just leave the env name
-        PS1="$WHITE(${VIRTUAL_ENV##*/})"
-  fi
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-  if [[ $RET == 0 ]]; then
-    PS1=$PS1$GREEN
-  else
-    PS1=$PS1$RED
-  fi
-  # Normal prompt
-  PS1="$PS1%n@%m${WHITE}:${BLUE}%~"
-  # If not master show git branch
-  BRANCH=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-  if [[ $BRANCH ]] && [[ $BRANCH != 'master' ]]; then
-    PS1="$PS1 ${YELLOW}[${BRANCH}]"
-  fi
-  # Last $
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-  if [[ $RET == 0 ]]; then
-    PS1="$PS1$WHITE\$ "
-  else
-    PS1="$PS1$RED $RET\$$WHITE "
-  fi
-  case "$TERM" in xterm*|rxvt*)
-      #PS1="$PS1\[\e]0;\u@\h: \`PWD\`\a\]"
-      print -Pn "\e]0;%n@%m: "
-      PWDS
-      print -n "\a"
-  esac
-}
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export VISUAL="nano"
+
+eval `dircolors ~/.dircolors`
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

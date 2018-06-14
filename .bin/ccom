@@ -1,0 +1,1 @@
+g++ $1 -o o${1%.*} --std=c++14 -Wall -O3 -Wextra -pedantic
