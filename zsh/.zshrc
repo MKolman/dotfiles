@@ -67,7 +67,8 @@ eval $(dircolors ~/.dircolors)
 
 source $ZSH/oh-my-zsh.sh
 
-EDITOR='vim'
+export EDITOR=vim
+export VISUAL="$EDITOR"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
