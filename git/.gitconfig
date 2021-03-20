@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[user]
+	email = maks@kolman.si
+	name = Maks Kolman
+[cola]
+	spellcheck = false

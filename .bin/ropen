@@ -1,2 +1,0 @@
-# Open first file in subdirectories that matches query
-find . -name $1 | head -n1 | xargs xdg-open

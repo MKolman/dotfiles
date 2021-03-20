@@ -1,9 +1,0 @@
-cp ~/.bash_profile .
-cp ~/.bash_aliases .
-cp ~/.bashrc .
-cp ~/.zshrc .
-cp ~/.oh-my-zsh/themes/kolman.zsh-theme .oh-my-zsh/themes/
-cp ~/.dircolors .
-cp ~/.ssh/config .ssh/
-cp ~/.bin . -r
-cp ~/.config/i3 .config/ -r
