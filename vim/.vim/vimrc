@@ -28,6 +28,7 @@ hi ColorColumn ctermbg=darkgrey guibg=darkgrey
 " Install plugins if updated run :PlugInstall
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 Plug 'mg979/vim-visual-multi'
 call plug#end()
 " Ctrl+P should search buffers + current dir + recently opened 
