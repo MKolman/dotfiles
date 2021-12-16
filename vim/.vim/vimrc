@@ -12,6 +12,12 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set hidden
+set mouse=a
+
+autocmd FileType typescript setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType vue setlocal ts=2 sts=2 sw=2
 
 " Relative numbers on focused window
 set number relativenumber
@@ -38,6 +44,8 @@ Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
 " Ctrl+P should search buffers + current dir + recently opened 
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_use_caching = 0
+
 " Start autocomplete
 let g:deoplete#enable_at_startup = 1
 
