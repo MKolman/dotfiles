@@ -25,3 +25,6 @@ alias g++="g++ -Wall -Wextra -pedantic --std=c++17"
 # Use installed time command not bash's command
 alias time="time"
 alias timer="/usr/bin/time -f '%e %U %S'"
+
+# Override vim with nvim for muscle memory
+alias vim="nvim"

@@ -32,15 +32,13 @@ set colorcolumn=100
 hi ColorColumn ctermbg=darkgrey guibg=darkgrey
 
 " Install plugins if updated run :PlugInstall
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'mg979/vim-visual-multi'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 " Ctrl+P should search buffers + current dir + recently opened 
 let g:ctrlp_cmd = 'CtrlPMixed'
