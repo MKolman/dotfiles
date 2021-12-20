@@ -8,3 +8,5 @@
 	name = Maks Kolman
 [cola]
 	spellcheck = false
+[init]
+	defaultBranch = main
