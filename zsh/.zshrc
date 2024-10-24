@@ -70,6 +70,9 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export VISUAL="$EDITOR"
+unset BROWSER
+xdg-settings set default-web-browser google-chrome.desktop
+export BROWSER=/usr/bin/google-chrome-stable
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi

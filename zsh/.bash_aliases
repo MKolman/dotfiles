@@ -28,3 +28,6 @@ alias timer="/usr/bin/time -f '%e %U %S'"
 
 # Override vim with nvim for muscle memory
 alias vim="nvim"
+
+alias k="kubectl"
+alias dco="docker-compose"
