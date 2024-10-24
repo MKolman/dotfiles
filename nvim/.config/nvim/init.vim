@@ -13,6 +13,8 @@ set undofile
 set incsearch
 set hidden
 set mouse=a
+set foldmethod=indent
+set foldlevelstart=99
 
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
@@ -39,6 +41,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'mg979/vim-visual-multi'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
 call plug#end()
 " Ctrl+P should search buffers + current dir + recently opened 
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -46,6 +50,9 @@ let g:ctrlp_use_caching = 0
 
 " Start autocomplete
 let g:deoplete#enable_at_startup = 1
+
+" Run RustFmt on save
+let g:rustfmt_autosave = 1
 
 " Move lines using alt+shift+{j,k}
 nnoremap <A-S-j> :m .+1<CR>==
@@ -83,3 +90,7 @@ let g:VM_maps["Redo"]   = '<C-r>'
 
 " Autocompletion using vim-go and deoplete.nvim
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+lua <<EOF
+require('rust-tools').setup(opts)
+EOF
