@@ -3,6 +3,7 @@
 	br = branch
 	ci = commit
 	st = status
+	sw = switch
 [user]
 	email = maks@kolman.si
 	name = Maks Kolman
