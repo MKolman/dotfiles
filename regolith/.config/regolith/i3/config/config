@@ -37,7 +37,8 @@
 ###############################################################################
 # SI keyboard on alt hold and caps lock = escape
 ###############################################################################
-exec --no-startup-id setxkbmap -option 'grp:switch' -option 'caps:escape' -layout us,si
+exec --no-startup-id setxkbmap -option 'grp:switch,grp:alt_space_toggle,caps:escape' -layout us,si -variant ,us
+exec --no-startup-id inputplug -c ~/.bin/process_inputplug_event.sh
 
 ###############################################################################
 # Key Mappings
@@ -619,6 +620,7 @@ font $i3-wm.font
 ###############################################################################
 # i3 Bar
 ###############################################################################
+
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
 set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
